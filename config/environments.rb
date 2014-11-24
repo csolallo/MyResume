@@ -4,7 +4,7 @@ require 'sinatra/activerecord'
 #The environment variable DATABASE_URL should be in the following format:
 # => mysql2://{user}:{password}@{host}:{port}/path
 configure :production, :development do
-  db = URI.parse(ENV['DATABASE_URL'] || "mysql2://#{ENV['USERNAME']}:#{ENV['PASSWORD']}@#{ENV['HOSTNAME']}:#{ENV['PORT']}/#{ENV['DB_NAME']}")
+  db = URI.parse(ENV['DATABASE_URL'] || "mysql2://#{ENV['RDS_USERNAME']}:#{ENV['RDS_PASSWORD']}@#{ENV['RDS_HOSTNAME']}:#{ENV['RDS_PORT']}/#{ENV['RDS_DB_NAME']}")
  
   ActiveRecord::Base.establish_connection(
     :adapter => db.scheme,
