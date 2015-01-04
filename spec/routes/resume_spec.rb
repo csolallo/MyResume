@@ -54,4 +54,25 @@ describe 'Resume routes' do
     expect { $tags = JSON.parse last_response.body }.not_to raise_error
     expect($tags.length).to be > 1
   end
+  
+  it "jobs for tag method is valid" do
+    # invalid tag should return a 404
+    get "/resumes/#{RSpec.configuration.valid_resume_id}/tags/#{RSpec.configuration.invalid_id}/jobs"
+    expect(last_response.status).to eq(404)
+    
+    # get jobs with a specific tag
+    get "/resumes/#{RSpec.configuration.valid_resume_id}/tags/#{RSpec.configuration.valid_tag_id}/jobs"
+    expect(last_response.ok?).to be true
+    
+    expect{ $tagged_jobs = JSON.parse last_response.body }.not_to raise_error
+    expect($tagged_jobs['jobs'].length).to be > 0
+    
+    # get jobs for specific tags
+    get "/resumes/#{RSpec.configuration.valid_resume_id}/tags/#{RSpec.configuration.valid_tag_array}/jobs"
+    expect(last_response.ok?).to be true
+
+    expect{ $tagged_jobs = JSON.parse last_response.body }.not_to raise_error
+    expect($tagged_jobs['jobs'].length).to be > 0
+  end
+  
 end

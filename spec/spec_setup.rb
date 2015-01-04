@@ -8,6 +8,19 @@ RSpec.configure do |config|
   
   config.add_setting :valid_resume_id
   config.valid_resume_id = 1
+
+  config.add_setting :valid_job_id
+  config.valid_job_id = 2
+
+  # a project that can be used to test accomplishments, tags, apps, etc. 
+  config.add_setting :valid_project_id
+  config.valid_project_id = 3
+  
+  config.add_setting :valid_tag_id
+  config.valid_tag_id = 1
+  
+  config.add_setting :valid_tag_array
+  config.valid_tag_array = "1,4"
   
   config.add_setting :last_job_start_date
   config.last_job_start_date = '8/1/2014'

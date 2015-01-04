@@ -24,4 +24,18 @@ describe Resume::Models::Person do
     expect(person.name).to eq(RSpec.configuration.info[:name])
   end
   
+  it "person should have one resume" do
+    person = Resume::Models::Person.find(RSpec.configuration.valid_person_id)
+    expect(person.resume).not_to be_nil
+  end
+  
+  it "person should have certificates" do
+    person = Resume::Models::Person.find(RSpec.configuration.valid_person_id)
+    expect(person.certificates.length).to be > 0
+  end
+  
+  it "person should have career highlights" do
+    person = Resume::Models::Person.find(RSpec.configuration.valid_person_id)
+    expect(person.highlights.length).to be > 0
+  end
 end

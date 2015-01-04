@@ -36,4 +36,14 @@ describe Resume::Models::Resume do
   it "find by person with invalid value should raise ActiveRecord::RecordNotFound" do
     expect { Resume::Models::Resume.find_by_person('John Doe') }.to raise_error(ActiveRecord::RecordNotFound)
   end
+  
+  it "resume must belong to a person" do
+    resume = Resume::Models::Resume.find_by_id(RSpec.configuration.valid_resume_id)
+    expect(resume.person).to_not be_nil
+  end
+  
+  it "resume should have jobs" do
+    resume = Resume::Models::Resume.find_by_id(RSpec.configuration.valid_resume_id)
+    expect(resume.jobs.length).to be > 0
+  end
 end
