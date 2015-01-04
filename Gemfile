@@ -6,9 +6,14 @@ gem 'mysql2'
 gem 'activerecord'
 gem "activesupport", :require => "active_support"
 gem 'sinatra-activerecord'
-#gem 'sinatra-contrib'
 gem 'rake'
 
 group :development do
   gem 'tux'
+end
+
+group :test do
+  gem 'rspec'
+  gem "minitest"
+  gem 'rack-test'
 end
