@@ -1,5 +1,8 @@
+*.komodoproject
 Gemfile.lock
-config/*.sh
+config/source.me
+.rspec
+spec/spec_helper.rb
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
