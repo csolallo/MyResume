@@ -19,6 +19,7 @@ module Resume
         unless person.address2.nil?; hash[:address2] = person.address2; end
         unless person.city.nil?; hash[:city] = person.city; end
         unless person.state.nil?; hash[:state] = person.state; end
+        unless person.zip.nil?; hash[:zip] = person.zip; end
         unless person.number.nil?; hash[:phone] = person.number; end
         unless person.email.nil?; hash[:email] = person.email; end
         
