@@ -105,7 +105,7 @@ project.apps.create(
   name: 'Loyola',
   platform: 'iOS',
   url: 'https://itunes.apple.com/us/app/loyola/id389224172?mt=8',
-  image_url: 'http://a5.mzstatic.com/us/r30/Purple1/v4/8b/0c/52/8b0c5296-4829-594a-f445-6b887aaad9a1/icon175x175.png'
+  image_url: 'http://a3.mzstatic.com/us/r30/Purple2/v4/00/5b/2e/005b2e02-6749-0b91-cc04-c42b479d22b2/icon175x175.jpeg'
 )
 
 project.apps.create(

@@ -11,6 +11,10 @@ Bundler.require
 
 module Resume
   class App < Sinatra::Application
+    configure do
+      enable :static
+    end
+    
     use Rack::Deflater
 
     use Resume::Routes::Person
