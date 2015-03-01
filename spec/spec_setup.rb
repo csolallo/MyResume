@@ -27,7 +27,7 @@ RSpec.configure do |config|
   
   config.add_setting :info
   config.info = {
-    :uuid => '048F0752-37BF-4D0E-ADFD-28BAF1E270FD',
+    :uuid => '7CBD5D29-F410-4E75-86D3-EA78ED18CFB6',
     :name => 'Carlos Sola-Llonch'
   }
   
