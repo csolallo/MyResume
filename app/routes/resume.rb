@@ -48,6 +48,7 @@ module Resume
         end
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         result.to_json
       end
   
@@ -56,6 +57,7 @@ module Resume
         tags = Models::Tag.find_by_resume r
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         tags.to_json
       end
       
@@ -108,6 +110,8 @@ module Resume
           raise JobNotFound
         end
 
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        
         #remove the unneeded role.id now
         result[:jobs].each { |job| job.delete('id') }
         result.to_json       

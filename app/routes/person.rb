@@ -24,6 +24,7 @@ module Resume
         unless person.email.nil?; hash[:email] = person.email; end
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         hash.to_json
       end
     
@@ -42,6 +43,7 @@ module Resume
         end
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         certs.to_json
       end
       
@@ -50,6 +52,7 @@ module Resume
         highlights = []
         person.highlights.each { |highlight| highlights << highlight.description }
         
+        response.headers['Access-Control-Allow-Origin'] = '*'
         highlights.to_json
       end
       
@@ -59,6 +62,7 @@ module Resume
         hash = {:resume => resume.id}
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         hash.to_json
       end
     end
