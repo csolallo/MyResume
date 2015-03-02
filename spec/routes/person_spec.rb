@@ -11,13 +11,13 @@ describe 'Person routes' do
   end
   
   it "fetching an invalid person returns a 404" do
-    get '/people/blah-blah-blah/resume'
+    get '/api-v1/people/blah-blah-blah/resume'
     $stdout.puts last_response.status
     expect(last_response.status).to eq(404)
   end
   
   it "info method is valid" do
-    get "/people/#{RSpec.configuration.info[:uuid]}/info"
+    get "/api-v1/people/#{RSpec.configuration.info[:uuid]}/info"
     expect(last_response.ok?).to be true
 
     #ensure we get valid json
@@ -26,7 +26,7 @@ describe 'Person routes' do
   end
   
   it "education method is valid" do
-    get "/people/#{RSpec.configuration.info[:uuid]}/education"
+    get "/api-v1/people/#{RSpec.configuration.info[:uuid]}/education"
     expect(last_response.ok?).to be true
     
     expect { $arrEducation = JSON.parse last_response.body }.not_to raise_error
@@ -38,7 +38,7 @@ describe 'Person routes' do
   end
   
   it "highlights method is valid" do
-    get "/people/#{RSpec.configuration.info[:uuid]}/highlights"
+    get "/api-v1/people/#{RSpec.configuration.info[:uuid]}/highlights"
     expect(last_response.ok?).to be true
     
     expect { $arrHighlights = JSON.parse last_response.body }.not_to raise_error
@@ -46,7 +46,7 @@ describe 'Person routes' do
   end
   
   it "resume method is valid" do
-    get "/people/#{RSpec.configuration.info[:uuid]}/resume"
+    get "/api-v1/people/#{RSpec.configuration.info[:uuid]}/resume"
     expect(last_response.ok?).to be true
     
     expect { $resume = JSON.parse last_response.body }.not_to raise_error

@@ -12,7 +12,7 @@ module Resume
         person
       end
       
-      get '/people/:uuid/info' do |uuid|
+      get '/api-v1/people/:uuid/info' do |uuid|
         person = self.find_person_by_uuid(uuid)
         hash = {:name => person.name}
         unless person.address1.nil?; hash[:address1] = person.address1; end
@@ -28,7 +28,7 @@ module Resume
         hash.to_json
       end
     
-      get '/people/:uuid/education' do |uuid|
+      get '/api-v1/people/:uuid/education' do |uuid|
         person = self.find_person_by_uuid(uuid)
         certs = []
         person.certificates.each do |cert|
@@ -47,7 +47,7 @@ module Resume
         certs.to_json
       end
       
-      get '/people/:uuid/highlights' do |uuid|
+      get '/api-v1/people/:uuid/highlights' do |uuid|
         person = self.find_person_by_uuid(uuid)
         highlights = []
         person.highlights.each { |highlight| highlights << highlight.description }
@@ -56,7 +56,7 @@ module Resume
         highlights.to_json
       end
       
-      get '/people/:uuid/resume' do |uuid|
+      get '/api-v1/people/:uuid/resume' do |uuid|
         person = self.find_person_by_uuid(uuid)
         resume = Models::Resume.find_by_person(person)
         hash = {:resume => resume.id}

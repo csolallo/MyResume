@@ -11,7 +11,7 @@ module Resume
         end
       end
       
-      get '/resumes/:resume/jobs' do |resume|
+      get '/api-v1/resumes/:resume/jobs' do |resume|
         r = self.find_resume_by_id(resume)
         
         since = params[:since]
@@ -52,7 +52,7 @@ module Resume
         result.to_json
       end
   
-      get '/resumes/:resume/tags' do |resume|
+      get '/api-v1/resumes/:resume/tags' do |resume|
         r = self.find_resume_by_id(resume)
         tags = Models::Tag.find_by_resume r
         
@@ -61,7 +61,7 @@ module Resume
         tags.to_json
       end
       
-      get '/resumes/:resume/tags/:tags/jobs' do |resume, tags|
+      get '/api-v1/resumes/:resume/tags/:tags/jobs' do |resume, tags|
         r = self.find_resume_by_id(resume)
         projects = Models::Project.find_by_resume(r)
         tags = tags.split(',').map { |x| x.to_i }
