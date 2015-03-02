@@ -1,3 +1,4 @@
+#This file is used by Passenger - AWS
 require 'sinatra'
 require 'sinatra/activerecord'
 
