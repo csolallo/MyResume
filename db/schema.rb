@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026052648) do
+ActiveRecord::Schema.define(version: 20150126024450) do
 
   create_table "accomplishments", force: true do |t|
     t.text    "description",     null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20141026052648) do
     t.string  "url",        limit: 100, null: false
     t.integer "project_id",             null: false
     t.text    "comment"
+    t.string  "image_url"
   end
 
   add_index "apps", ["project_id"], name: "index_apps_on_project_id", using: :btree

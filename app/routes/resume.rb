@@ -11,7 +11,7 @@ module Resume
         end
       end
       
-      get '/resumes/:resume/jobs' do |resume|
+      get '/api-v1/resumes/:resume/jobs' do |resume|
         r = self.find_resume_by_id(resume)
         
         since = params[:since]
@@ -48,18 +48,20 @@ module Resume
         end
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         result.to_json
       end
   
-      get '/resumes/:resume/tags' do |resume|
+      get '/api-v1/resumes/:resume/tags' do |resume|
         r = self.find_resume_by_id(resume)
         tags = Models::Tag.find_by_resume r
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         tags.to_json
       end
       
-      get '/resumes/:resume/tags/:tags/jobs' do |resume, tags|
+      get '/api-v1/resumes/:resume/tags/:tags/jobs' do |resume, tags|
         r = self.find_resume_by_id(resume)
         projects = Models::Project.find_by_resume(r)
         tags = tags.split(',').map { |x| x.to_i }
@@ -108,6 +110,8 @@ module Resume
           raise JobNotFound
         end
 
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        
         #remove the unneeded role.id now
         result[:jobs].each { |job| job.delete('id') }
         result.to_json       

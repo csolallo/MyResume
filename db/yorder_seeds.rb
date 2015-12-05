@@ -42,5 +42,6 @@ project.apps.create(
   name: 'yorder',
   platform: 'iOS',
   url: 'https://itunes.apple.com/us/app/yorder/id422508599?mt=8',
+  image_url: 'http://a2.mzstatic.com/us/r30/Purple/v4/1e/1c/7f/1e1c7f2d-ddea-93e2-4e66-17d5078571c0/icon175x175.jpeg',
   comment: 'I am no longer involved with Yorder. It looks like the app is no longer maintained.'
 )

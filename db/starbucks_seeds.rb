@@ -68,6 +68,7 @@ project.apps.create(
   name: 'Starbucks',
   platform: 'iOS',
   url: 'https://itunes.apple.com/us/app/starbucks/id331177714?mt=8',
+  image_url: 'http://a2.mzstatic.com/us/r30/Purple5/v4/04/22/ed/0422ed2a-7cce-5117-20e9-76fcf82f5dad/icon175x175.jpeg',
   comment: 'The version currently in the store is not the version I worked on.'
 )
 

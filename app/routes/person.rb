@@ -12,21 +12,23 @@ module Resume
         person
       end
       
-      get '/people/:uuid/info' do |uuid|
+      get '/api-v1/people/:uuid/info' do |uuid|
         person = self.find_person_by_uuid(uuid)
         hash = {:name => person.name}
         unless person.address1.nil?; hash[:address1] = person.address1; end
         unless person.address2.nil?; hash[:address2] = person.address2; end
         unless person.city.nil?; hash[:city] = person.city; end
         unless person.state.nil?; hash[:state] = person.state; end
+        unless person.zip.nil?; hash[:zip] = person.zip; end
         unless person.number.nil?; hash[:phone] = person.number; end
         unless person.email.nil?; hash[:email] = person.email; end
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         hash.to_json
       end
     
-      get '/people/:uuid/education' do |uuid|
+      get '/api-v1/people/:uuid/education' do |uuid|
         person = self.find_person_by_uuid(uuid)
         certs = []
         person.certificates.each do |cert|
@@ -41,23 +43,26 @@ module Resume
         end
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         certs.to_json
       end
       
-      get '/people/:uuid/highlights' do |uuid|
+      get '/api-v1/people/:uuid/highlights' do |uuid|
         person = self.find_person_by_uuid(uuid)
         highlights = []
         person.highlights.each { |highlight| highlights << highlight.description }
         
+        response.headers['Access-Control-Allow-Origin'] = '*'
         highlights.to_json
       end
       
-      get '/people/:uuid/resume' do |uuid|
+      get '/api-v1/people/:uuid/resume' do |uuid|
         person = self.find_person_by_uuid(uuid)
         resume = Models::Resume.find_by_person(person)
         hash = {:resume => resume.id}
         
         content_type 'application/json'
+        response.headers['Access-Control-Allow-Origin'] = '*'
         hash.to_json
       end
     end
