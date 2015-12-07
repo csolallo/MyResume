@@ -4,7 +4,7 @@
 
 We are using the following base box:  
 
-(Debian Jessie 8.0 RC2 64-bit Mininimal, Shrinked + Guest Additions 4.3.24 + Puppet 3.7.2)[http://static.gender-api.com/debian-8-jessie-rc2-x64-slim.box]
+[Debian Jessie 8.0 RC2 64-bit (Mininimal, Shrinked + Guest Additions 4.3.24 + Puppet 3.7.2)](http://static.gender-api.com/debian-8-jessie-rc2-x64-slim.box)
 
 The following ports should be forwarded:  
 
