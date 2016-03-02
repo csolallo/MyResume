@@ -10,7 +10,8 @@ Resume::Models::Company.create(
 company = Resume::Models::Company.find_by_name(company_name)
 company.roles.create(
   title: 'Principal Developer (mobile)',
-  start_date: '8/1/2014'.to_date
+  start_date: '8/1/2014'.to_date,
+  end_date: '4/1/2015'.to_date
 )
 
 role = company.roles.find_by_title('Principal Developer (mobile)')

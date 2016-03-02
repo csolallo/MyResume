@@ -9,6 +9,8 @@ def get_tag(name)
 end
 
 obj_c = get_tag 'objective-c'
+swift = get_tag 'Swift'
+mdm = get_tag 'MDM'
 android = get_tag 'android'
 php = get_tag 'android'
 codeigniter = get_tag 'CodeIgniter'
@@ -34,6 +36,10 @@ ca = get_tag 'CoreAnimation'
 bindings = get_tag 'Bindings'
 swizzle = get_tag 'swizzling'
 ruby = get_tag 'ruby'
+rails = get_tag 'Rails'
+postgres = get_tag 'Postgresql'
+heroku = get_tag 'Heroku'
+redis = get_tag 'Redis'
 java = get_tag 'java'
 spring = get_tag 'Spring 2'
 struts = get_tag 'Struts 2'
@@ -53,6 +59,7 @@ aspnet = get_tag 'ASP.NET'
 ilog = get_tag 'ILog Rules Engine'
 xquery = get_tag 'XQuery'
 delphi = get_tag 'Delphi 5/6'
+
 
 co = Resume::Models::Company.find_by_name('Providence Health & Services')
 
@@ -118,3 +125,16 @@ proj2.save!
 proj3 = co.roles.find_by_title('Technical Lead/Architect').projects.find_by_name('Eureka')
 [dotnet, win32, delphi, aspnet, xsl].each { |tag| proj3.tags << tag }
 proj3.save!
+
+
+co = Resume::Models::Company.find_by_name('Requested')
+role = co.roles.find_by_title('Software Engineer/Technologist')
+
+proj = role.projects.find_by_name('Support and on-boarding web application')
+[js, ruby, rails, postgres, heroku, redis].each { |tag| proj.tags << tag }
+
+proj = role.projects.find_by_name('Merchant app')
+[swift, obj_c, mdm].each { |tag| proj.tags << tag }
+
+proj = role.projects.find_by_name('Consumer app')
+[swift, obj_c, phonegap, js].each { |tag| proj.tags << tag }

@@ -39,7 +39,7 @@ describe 'Resume routes' do
     expect(last_response.status).to eq(404)
 
     #invalid date
-    get "/api-v1/resumes/#{RSpec.configuration.valid_resume_id}/jobs?since=13/1/2014"
+    get "/api-v1/resumes/#{RSpec.configuration.valid_resume_id}/jobs?since=13/1/2016"
     expect(last_response.status).to eq(404)
 
     #future date    

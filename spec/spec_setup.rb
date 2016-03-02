@@ -23,11 +23,11 @@ RSpec.configure do |config|
   config.valid_tag_array = "1,4"
   
   config.add_setting :last_job_start_date
-  config.last_job_start_date = '8/1/2014'
+  config.last_job_start_date = '4/1/2015'
   
   config.add_setting :info
   config.info = {
-    :uuid => '7CBD5D29-F410-4E75-86D3-EA78ED18CFB6',
+    :uuid => '30C6C5EB-533A-41C7-9162-2B00F0EB9305',
     :name => 'Carlos Sola-Llonch'
   }
   

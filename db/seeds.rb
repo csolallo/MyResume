@@ -2,6 +2,10 @@ if Resume::Models::Person.count(:all) == 0
   require_relative 'person_seeds'
 end
 
+if Resume::Models::Company.find_by_name('Requested').nil?
+  require_relative 'requested_seeds'
+end
+
 if Resume::Models::Company.find_by_name('Providence Health & Services').nil?
   require_relative 'providence_seeds'
 end
