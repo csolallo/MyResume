@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "23f54c5b-a606-4f30-857b-ce27f1f0ba81",
+		"name": "myResume",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/info",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"{{uuid}}",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info (bad)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/info",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"bad-uuid",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "education",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/education",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"{{uuid}}",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "education (bad)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/education",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"bad-uuid",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "highlights",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/highlights",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"{{uuid}}",
+								"highlights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "highlights (bad)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/highlights",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"bad-uuid",
+								"highlights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/resume",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"{{uuid}}",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resume (bad)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/resume",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"person",
+								"bad-uuid",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "resume",
+			"item": [
+				{
+					"name": "jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/jobs",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"{{resume}}",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs since",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/jobs?since=1/1/2015",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"{{resume}}",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "1/1/2015"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tags",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/tags",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"{{resume}}",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs by tags",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+							},
+							{
+								"key": "User-Agent",
+								"value": "RestSharp/105.0.1.0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/tags/{{tags}}/jobs",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"{{resume}}",
+								"tags",
+								"{{tags}}",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

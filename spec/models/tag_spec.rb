@@ -1,13 +1,9 @@
-require_relative '../../app' # <== the Sinatra app
-require_relative '../spec_setup'
-require 'rack/test'
+require_relative '../rails_helper'
 
-describe Resume::Models::Role do
-  include Rack::Test::Methods
-
+describe Role do
   it "a resume should have tags" do
-    resume = Resume::Models::Resume.find(RSpec.configuration.valid_resume_id)
-    tags = Resume::Models::Tag.find_by_resume(resume)
+    resume = Resume.find(RSpec.configuration.valid_resume_id)
+    tags = Tag.in_resume(resume)
     
     expect(tags.length).to be > 0
   end

@@ -1,5 +1,5 @@
 company_name = 'HighPoint'
-Resume::Models::Company.create(
+Company.create(
   name: company_name,
   address1: '20 E University Drive',
   address2: 'Suite 201',
@@ -8,7 +8,7 @@ Resume::Models::Company.create(
   zip: '85281'
 )
 
-company = Resume::Models::Company.find_by_name(company_name)
+company = Company.find_by_name(company_name)
 company.roles.create(
   title: 'Director of Mobile Technologies',
   start_date: '3/1/2013'.to_date,

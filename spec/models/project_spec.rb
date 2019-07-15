@@ -1,12 +1,8 @@
-require_relative '../../app' # <== the Sinatra app
-require_relative '../spec_setup'
-require 'rack/test'
+require_relative '../rails_helper'
 
-describe Resume::Models::Project do
-  include Rack::Test::Methods
-  
+describe Project do
   before(:context) do
-    projects = Resume::Models::Project.find_by_resume(RSpec.configuration.valid_resume_id)
+    projects = Project.in_resume(RSpec.configuration.valid_resume_id)
     projects.each do |proj|
       if proj.id == RSpec.configuration.valid_project_id
         @project = proj

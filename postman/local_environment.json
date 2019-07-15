@@ -1,0 +1,34 @@
+{
+	"id": "aa56dc1a-5e86-49db-aaa2-4720451a8aff",
+	"name": "myResume_local",
+	"values": [
+		{
+			"key": "scheme",
+			"value": "http",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "127.0.0.1:3000",
+			"enabled": true
+		},
+		{
+			"key": "resume",
+			"value": "1",
+			"enabled": true
+		},
+		{
+			"key": "uuid",
+			"value": "bdbd075d-4ff3-4741-a34a-b36acf3ca61f",
+			"enabled": true
+		},
+		{
+			"key": "tags",
+			"value": "1,3",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-02-11T06:38:14.721Z",
+	"_postman_exported_using": "Postman/6.7.3"
+}

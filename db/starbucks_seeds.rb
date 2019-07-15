@@ -1,5 +1,5 @@
 company_name = 'Starbucks'
-Resume::Models::Company.create(
+Company.create(
   name: company_name,
   address1: '2401 Utah Ave S',
   city: 'Seattle',
@@ -7,7 +7,7 @@ Resume::Models::Company.create(
   zip: '98134'
 )
 
-company = Resume::Models::Company.find_by_name(company_name)
+company = Company.find_by_name(company_name)
 
 company.roles.create(
   title: 'Sr. Software Developer',

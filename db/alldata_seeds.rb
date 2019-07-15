@@ -1,5 +1,5 @@
 company_name = 'ALLDATA/Autozone'
-Resume::Models::Company.create(
+Company.create(
   name: company_name,
   address1: '9650 West Taron Drive',
   address2: 'Suite 100',
@@ -8,7 +8,7 @@ Resume::Models::Company.create(
   zip: '95757'
 )
 
-company = Resume::Models::Company.find_by_name(company_name)
+company = Company.find_by_name(company_name)
 
 company.roles.create(
   title: 'Sr. Developer/Product Architect',

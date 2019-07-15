@@ -1,11 +1,11 @@
 company_name = 'ISingleton, Inc.'
-Resume::Models::Company.create(
+Company.create(
   name: company_name,
   city: 'Sacramento',
   state: 'CA'
 )
 
-company = Resume::Models::Company.find_by_name(company_name)
+company = Company.find_by_name(company_name)
 
 company.roles.create(
   title: 'Software Developer/Architect',

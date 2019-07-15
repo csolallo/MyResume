@@ -1,0 +1,765 @@
+  [1m[36mActiveRecord::SchemaMigration Load (180.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (135.1ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (128.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 307ms (Views: 20.4ms | ActiveRecord: 269.9ms)
+  [1m[35m (182.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.3ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#info as JSON
+  Parameters: {"uuid"=>"79a9d167-679f-4c89-a74d-c1e3daa91bab"}
+  [1m[36mPerson Load (202.0ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '79a9d167-679f-4c89-a74d-c1e3daa91bab' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 204ms (Views: 0.7ms | ActiveRecord: 202.0ms)
+  [1m[35m (163.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (306.9ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#education as JSON
+  Parameters: {"uuid"=>"79a9d167-679f-4c89-a74d-c1e3daa91bab"}
+  [1m[36mPerson Load (201.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '79a9d167-679f-4c89-a74d-c1e3daa91bab' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 204ms (Views: 0.9ms | ActiveRecord: 201.6ms)
+  [1m[35m (220.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (203.0ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#highlights as JSON
+  Parameters: {"uuid"=>"79a9d167-679f-4c89-a74d-c1e3daa91bab"}
+  [1m[36mPerson Load (202.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '79a9d167-679f-4c89-a74d-c1e3daa91bab' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 204ms (Views: 0.8ms | ActiveRecord: 202.2ms)
+  [1m[35m (201.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (170.0ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as JSON
+  Parameters: {"uuid"=>"79a9d167-679f-4c89-a74d-c1e3daa91bab"}
+  [1m[36mPerson Load (201.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '79a9d167-679f-4c89-a74d-c1e3daa91bab' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 204ms (Views: 0.8ms | ActiveRecord: 201.6ms)
+  [1m[35m (398.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (202.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (205.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (125.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (204.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (307.0ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35m (203.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (206.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '79a9d167-679f-4c89-a74d-c1e3daa91bab' LIMIT 1[0m
+  [1m[35m (304.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35m (204.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35m (314.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (205.1ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35m (204.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (306.6ms)[0m  [1m[34mSELECT DISTINCT `projects`.* FROM `projects` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` INNER JOIN `resumes` ON `resumes`.`id` = `roles`.`resume_id` WHERE (`resumes`.`id` = 1)[0m
+  [1m[35m (203.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (204.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (204.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (203.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (203.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (202.7ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (306.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (206.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (200.9ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (220.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (194.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.7ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 1 LIMIT 1[0m
+  [1m[35m (306.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (203.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (206.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35m (203.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (202.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (203.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (307.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.2ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 1 LIMIT 1[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.6ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 1 LIMIT 1[0m
+  [1m[35m (204.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mResume Load (203.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 1 LIMIT 1[0m
+  [1m[35m (203.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (205.3ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 1 LIMIT 1[0m
+  [1m[35m (205.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (151.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (112.1ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (146.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 551ms (Views: 18.8ms | ActiveRecord: 516.3ms)
+  [1m[35m (182.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#info as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+Completed 200 OK in 631ms (Views: 0.1ms | ActiveRecord: 610.6ms)
+  [1m[35m (172.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#education as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (304.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mCertificate Load (202.0ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+Completed 200 OK in 941ms (Views: 0.1ms | ActiveRecord: 883.6ms)
+  [1m[35m (187.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.1ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#highlights as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mAccomplishment Load (201.4ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+Completed 200 OK in 822ms (Views: 0.1ms | ActiveRecord: 796.9ms)
+  [1m[35m (198.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (203.6ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (407.1ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mResume Load (203.8ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 ORDER BY `resumes`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1023ms (Views: 0.2ms | ActiveRecord: 1015.8ms)
+  [1m[35m (201.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (203.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (306.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (196.5ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (203.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (204.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (106.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[35m (107.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (183.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mResume Load (187.4ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 LIMIT 1[0m
+  [1m[35m (204.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (113.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mCertificate Load (122.4ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+  [1m[35m (170.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mAccomplishment Load (202.9ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+  [1m[35m (203.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (210.1ms)[0m  [1m[34mSELECT DISTINCT `projects`.* FROM `projects` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` INNER JOIN `resumes` ON `resumes`.`id` = `roles`.`resume_id` WHERE (`resumes`.`id` = 2)[0m
+  [1m[35m (199.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccomplishment Load (199.9ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Project'[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (304.7ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `tags`.`id` = `projects_tags`.`tag_id` WHERE `projects_tags`.`project_id` = 2[0m
+  [1m[35m (201.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApp Load (202.4ms)[0m  [1m[34mSELECT `apps`.* FROM `apps` WHERE `apps`.`project_id` = 2[0m
+  [1m[35m (176.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (206.6ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (200.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (200.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (305.9ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (204.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (204.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (158.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (249.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (203.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (204.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (203.2ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mPerson Load (124.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (99.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (206.8ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (165.6ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (198.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mResume Load (204.8ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (305.2ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (203.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Load (210.8ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35m (190.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (200.7ms)[0m  [1m[34mSELECT `projects`.* FROM `projects` WHERE `projects`.`role_id` = 2[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mTag Load (200.3ms)[0m  [1m[34mSELECT DISTINCT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `projects_tags`.`tag_id` = `tags`.`id` INNER JOIN `projects` ON `projects`.`id` = `projects_tags`.`project_id` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` WHERE (`roles`.`resume_id` = 2)[0m
+  [1m[35m (111.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (198.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (376.0ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (200.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 411ms (Views: 8.2ms | ActiveRecord: 397.4ms)
+  [1m[35m (194.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.0ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#info as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.9ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+Completed 200 OK in 742ms (Views: 0.1ms | ActiveRecord: 713.0ms)
+  [1m[35m (174.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#education as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (135.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mCertificate Load (128.8ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+Completed 200 OK in 621ms (Views: 0.1ms | ActiveRecord: 591.6ms)
+  [1m[35m (148.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#highlights as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (200.9ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mAccomplishment Load (200.7ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+Completed 200 OK in 822ms (Views: 0.1ms | ActiveRecord: 804.8ms)
+  [1m[35m (116.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.1ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mResume Load (148.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 ORDER BY `resumes`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 763ms (Views: 0.1ms | ActiveRecord: 755.0ms)
+  [1m[35m (107.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (117.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (103.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (139.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (307.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (203.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (306.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (157.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (148.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (203.9ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[35m (204.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mResume Load (115.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 LIMIT 1[0m
+  [1m[35m (107.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (132.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (125.5ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mCertificate Load (368.5ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+  [1m[35m (236.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (200.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mAccomplishment Load (110.9ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+  [1m[35m (193.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (205.1ms)[0m  [1m[34mSELECT DISTINCT `projects`.* FROM `projects` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` INNER JOIN `resumes` ON `resumes`.`id` = `roles`.`resume_id` WHERE (`resumes`.`id` = 2)[0m
+  [1m[35m (199.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccomplishment Load (201.3ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 22 AND `accomplishments`.`associated_type` = 'Project'[0m
+  [1m[35m (204.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (307.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (205.9ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `tags`.`id` = `projects_tags`.`tag_id` WHERE `projects_tags`.`project_id` = 22[0m
+  [1m[35m (202.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (203.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApp Load (406.9ms)[0m  [1m[34mSELECT `apps`.* FROM `apps` WHERE `apps`.`project_id` = 22[0m
+  [1m[35m (189.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (203.3ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (204.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (613.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (205.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (204.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (203.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (203.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (306.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (305.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.3ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mPerson Load (202.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (204.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (296.6ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (194.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mResume Load (205.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (202.7ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (203.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Load (202.2ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35m (197.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (306.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (202.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects` WHERE `projects`.`role_id` = 2[0m
+  [1m[35m (306.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.3ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mTag Load (302.2ms)[0m  [1m[34mSELECT DISTINCT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `projects_tags`.`tag_id` = `tags`.`id` INNER JOIN `projects` ON `projects`.`id` = `projects_tags`.`project_id` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` WHERE (`roles`.`resume_id` = 2)[0m
+  [1m[35m (203.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (194.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (169.2ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (197.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 413ms (Views: 10.2ms | ActiveRecord: 397.3ms)
+  [1m[35m (192.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#info as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.8ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+Completed 200 OK in 642ms (Views: 0.1ms | ActiveRecord: 610.1ms)
+  [1m[35m (171.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#education as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mCertificate Load (151.5ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+Completed 200 OK in 825ms (Views: 0.1ms | ActiveRecord: 796.9ms)
+  [1m[35m (195.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (205.2ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#highlights as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (201.8ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mAccomplishment Load (199.5ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+Completed 200 OK in 928ms (Views: 0.2ms | ActiveRecord: 906.2ms)
+  [1m[35m (296.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (307.3ms)[0m  [1m[35mBEGIN[0m
+Processing by V1::PersonController#resume as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (202.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mResume Load (203.7ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 ORDER BY `resumes`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 822ms (Views: 0.2ms | ActiveRecord: 810.1ms)
+  [1m[35m (199.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (305.5ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (203.9ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (203.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (204.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (146.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (205.5ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[35m (202.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (128.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (191.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mResume Load (200.8ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 LIMIT 1[0m
+  [1m[35m (201.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (207.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mCertificate Load (200.1ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+  [1m[35m (203.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (204.1ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mAccomplishment Load (202.8ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+  [1m[35m (203.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (206.9ms)[0m  [1m[34mSELECT DISTINCT `projects`.* FROM `projects` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` INNER JOIN `resumes` ON `resumes`.`id` = `roles`.`resume_id` WHERE (`resumes`.`id` = 2)[0m
+  [1m[35m (200.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccomplishment Load (202.7ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 22 AND `accomplishments`.`associated_type` = 'Project'[0m
+  [1m[35m (202.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (307.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (202.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `tags`.`id` = `projects_tags`.`tag_id` WHERE `projects_tags`.`project_id` = 22[0m
+  [1m[35m (201.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (204.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (203.2ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (204.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (307.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (203.4ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (204.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (178.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (150.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (130.1ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (138.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (203.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (204.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (203.3ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mPerson Load (201.8ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (203.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (201.8ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (197.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mResume Load (203.4ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (200.3ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (305.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Load (202.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35m (196.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (304.7ms)[0m  [1m[34mSELECT `projects`.* FROM `projects` WHERE `projects`.`role_id` = 2[0m
+  [1m[35m (203.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (204.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (204.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mTag Load (202.8ms)[0m  [1m[34mSELECT DISTINCT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `projects_tags`.`tag_id` = `tags`.`id` INNER JOIN `projects` ON `projects`.`id` = `projects_tags`.`project_id` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` WHERE (`roles`.`resume_id` = 2)[0m
+  [1m[35m (200.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (200.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mProject Load (207.6ms)[0m  [1m[34mSELECT DISTINCT `projects`.* FROM `projects` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` INNER JOIN `resumes` ON `resumes`.`id` = `roles`.`resume_id` WHERE (`resumes`.`id` = 2)[0m
+  [1m[35m (199.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccomplishment Load (147.3ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 22 AND `accomplishments`.`associated_type` = 'Project'[0m
+  [1m[35m (302.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (304.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (147.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `tags`.`id` = `projects_tags`.`tag_id` WHERE `projects_tags`.`project_id` = 22[0m
+  [1m[35m (199.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (257.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApp Load (180.0ms)[0m  [1m[34mSELECT `apps`.* FROM `apps` WHERE `apps`.`project_id` = 22[0m
+  [1m[35m (208.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (99.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (93.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (90.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (91.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 221ms (Views: 21.0ms | ActiveRecord: 183.4ms)
+  [1m[35m (90.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.4ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#info as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (90.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+Completed 200 OK in 308ms (Views: 0.1ms | ActiveRecord: 275.7ms)
+  [1m[35m (92.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.8ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#education as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (91.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mCertificate Load (90.4ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+Completed 200 OK in 424ms (Views: 0.1ms | ActiveRecord: 375.5ms)
+  [1m[35m (91.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.8ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#highlights as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (91.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mAccomplishment Load (98.8ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+Completed 200 OK in 465ms (Views: 0.2ms | ActiveRecord: 446.7ms)
+  [1m[35m (93.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as JSON
+  Parameters: {"uuid"=>"18c74029-fdc5-4ce2-a76b-ba18ed197817"}
+  [1m[36mPerson Load (97.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[36mResume Load (95.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 ORDER BY `resumes`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 389ms (Views: 0.2ms | ActiveRecord: 376.0ms)
+  [1m[35m (94.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (92.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (93.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (95.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (92.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (89.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (95.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (92.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (90.9ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = '18c74029-fdc5-4ce2-a76b-ba18ed197817' LIMIT 1[0m
+  [1m[35m (89.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (91.7ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mResume Load (92.6ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`person_id` = 2 LIMIT 1[0m
+  [1m[35m (92.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (92.4ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mCertificate Load (92.7ms)[0m  [1m[34mSELECT `certificates`.* FROM `certificates` WHERE `certificates`.`person_id` = 2[0m
+  [1m[35m (93.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (93.3ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[36mAccomplishment Load (92.2ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 2 AND `accomplishments`.`associated_type` = 'Person'[0m
+  [1m[35m (91.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (96.9ms)[0m  [1m[34mSELECT DISTINCT `projects`.* FROM `projects` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` INNER JOIN `resumes` ON `resumes`.`id` = `roles`.`resume_id` WHERE (`resumes`.`id` = 2)[0m
+  [1m[35m (94.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccomplishment Load (96.1ms)[0m  [1m[34mSELECT `accomplishments`.* FROM `accomplishments` WHERE `accomplishments`.`associated_id` = 22 AND `accomplishments`.`associated_type` = 'Project'[0m
+  [1m[35m (90.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (91.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `tags`.`id` = `projects_tags`.`tag_id` WHERE `projects_tags`.`project_id` = 22[0m
+  [1m[35m (91.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (97.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApp Load (90.8ms)[0m  [1m[34mSELECT `apps`.* FROM `apps` WHERE `apps`.`project_id` = 22[0m
+  [1m[35m (89.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (95.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (97.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (210.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (200.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (91.1ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 9999 LIMIT 1[0m
+  [1m[35m (92.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (91.3ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (90.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Load (91.1ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (90.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (94.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (93.8ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mPerson Load (101.0ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35m (90.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (94.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (99.0ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (96.1ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (92.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mResume Load (91.9ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (92.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`resume_id` = 2[0m
+  [1m[35m (91.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Load (101.6ms)[0m  [1m[34mSELECT  `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35m (90.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (93.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (201.1ms)[0m  [1m[34mSELECT `projects`.* FROM `projects` WHERE `projects`.`role_id` = 2[0m
+  [1m[35m (90.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Load (91.8ms)[0m  [1m[34mSELECT  `resumes`.* FROM `resumes` WHERE `resumes`.`id` = 2 LIMIT 1[0m
+  [1m[36mTag Load (95.0ms)[0m  [1m[34mSELECT DISTINCT `tags`.* FROM `tags` INNER JOIN `projects_tags` ON `projects_tags`.`tag_id` = `tags`.`id` INNER JOIN `projects` ON `projects`.`id` = `projects_tags`.`project_id` INNER JOIN `roles` ON `roles`.`id` = `projects`.`role_id` WHERE (`roles`.`resume_id` = 2)[0m
+  [1m[35m (89.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (90.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (89.5ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (89.1ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 213ms (Views: 4.8ms | ActiveRecord: 181.5ms)
+  [1m[35m (91.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (95.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (92.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (96.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (100.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (88.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (91.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (87.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (87.5ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (86.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 197ms (Views: 5.0ms | ActiveRecord: 173.3ms)
+  [1m[35m (84.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (97.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (96.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (95.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (84.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (86.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (86.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (86.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (92.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (98.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (90.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (87.4ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (87.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 194ms (Views: 8.7ms | ActiveRecord: 179.9ms)
+  [1m[35m (88.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (93.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (93.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (94.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (93.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (299.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (86.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (99.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (88.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (90.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (87.6ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (92.2ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 201ms (Views: 12.7ms | ActiveRecord: 181.1ms)
+  [1m[35m (94.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (92.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (272.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (97.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (87.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (90.0ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::PersonController#resume as HTML
+  Parameters: {"uuid"=>"blah"}
+  [1m[36mPerson Load (95.6ms)[0m  [1m[34mSELECT  `people`.* FROM `people` WHERE `people`.`uuid` = 'blah' LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 220ms (Views: 21.7ms | ActiveRecord: 194.1ms)
+  [1m[35m (94.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (99.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (85.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (90.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (104.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (92.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (99.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (86.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (88.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (89.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `resumes` WHERE `resumes`.`person_id` = 0[0m
+  [1m[35m (88.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (87.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (86.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (87.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (93.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (89.5ms)[0m  [1m[31mROLLBACK[0m

@@ -1,19 +1,21 @@
-# A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'sinatra', :require => 'sinatra/base'
-gem 'mysql2'
-gem 'activerecord'
-gem "activesupport", :require => "active_support"
-gem 'sinatra-activerecord'
-gem 'rake'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'puma', '~> 3.0'
+gem 'jbuilder', '~> 2.5'
+gem 'rack-cors'
+
+group :development, :test do
+end
 
 group :development do
-  gem 'tux'
+  gem 'byebug', platform: :mri
+  gem 'listen', '~> 3.0.4'
 end
 
 group :test do
-  gem 'rspec'
-  gem "minitest"
-  gem 'rack-test'
+  gem 'rspec', '~> 3.5.0'
+  gem 'rspec-rails', '~> 3.5'
+  # gem 'rack-test'
 end

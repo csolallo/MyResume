@@ -1,0 +1,34 @@
+{
+	"id": "304eccc8-9e94-483a-b255-e440db8777cb",
+	"name": "myResume_heroku",
+	"values": [
+		{
+			"key": "scheme",
+			"value": "https",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "api.sola-llon.ch",
+			"enabled": true
+		},
+		{
+			"key": "uuid",
+			"value": "62ad1479-15f5-47de-b9a1-b65b7e133b34",
+			"enabled": true
+		},
+		{
+			"key": "resume",
+			"value": "1",
+			"enabled": true
+		},
+		{
+			"key": "tags",
+			"value": "1,3",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-02-11T06:38:07.207Z",
+	"_postman_exported_using": "Postman/6.7.3"
+}

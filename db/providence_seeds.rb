@@ -1,5 +1,5 @@
 company_name = 'Providence Health & Services'
-Resume::Models::Company.create(
+Company.create(
   name: company_name,
   address1: '2201 Lind Ave SW',
   city: 'Renton',
@@ -7,7 +7,7 @@ Resume::Models::Company.create(
   zip: '98057'
 )
 
-company = Resume::Models::Company.find_by_name(company_name)
+company = Company.find_by_name(company_name)
 company.roles.create(
   title: 'Principal Developer (mobile)',
   start_date: '8/1/2014'.to_date,

@@ -2,50 +2,94 @@
 
 ####Vagrant####
 
-We are using the following base box:  
+We are using the following base box:
 
-[Debian Jessie 8.0 RC2 64-bit (Mininimal, Shrinked + Guest Additions 4.3.24 + Puppet 3.7.2)](http://static.gender-api.com/debian-8-jessie-rc2-x64-slim.box)
+[bento/debian-8.5](https://atlas.hashicorp.com/bento/boxes/debian-8.5)
 
-The following ports should be forwarded:  
+The following ports should be forwarded:
 
 |Port | Service|
 |-----|--------|
 |3306 | Mysql  |
-|3000 | Sinatra|
+|3000 | Rails  |
+
+If using __Parallels__, install the [Vagrant Parallels plugin](https://github.com/Parallels/vagrant-parallels)
+
+The app has a dependency on the uuidgen utility that is not installed by default on debian. It can be installed using apt-get:
+`apt-get install uuid-runtime`
+
+Misc. notes on vagrant:
+
+Vagrant will sometimes not free port forwards on halt (known issue). To fix:
+
+* remove all unused forwards in:
+sudo vi /Library/Preferences/VMware\ Fusion/vmnet8/nat.conf
+
+* restart vmnet-cli:
+sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --stop
+sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --start
 
 ####Database####
 
-We are using Mysql 5.5.x. Because we are running in a VM, we need to ensure our dev user has full access:  
+Datbase is now hosted on and managed by ClearDB. I'm now using Heroku.
+  
+####Rails####
 
-    create user 'ResumeDbUser'@'10.0.2.2' identified by 'yourpassword';  
-    grant all privileges on *.* to 'ResumeDbUser'@'10.0.2.2' with grant option;  
-    flush privileges;
+If building Ruby from source:
 
-Also, make sure the bind address is set properly in /etc/mysql/my.conf  
+Uninstall existing ruby package
 
-    bind-address = 0.0.0.0
+Before building on debian:
+
+    sudo apt-get install libssl-dev
+    sudo apt-get install zlib1g-dev
     
-In order to build the mysql2 gem, we need the dev packages for mysql and ruby. On our Debian VM, we issue the following:  
+#####DB Config#####
 
-    apt-get install libmysqlclient-dev ruby-dev
-    gem install mysql
+I follow this strategy for cleansing the database.yml file:
+* In `./scripts/source.sh`, I export the RDS_* environment variables
+* I then make sure to run `source ./scripts/source.sh` before any Rails cli commands
 
-Make sure utf8 is the default character set for the databse. Before creating the database, make sure you update /etc/mysql/my.conf as follows:  
+#####Testing#####
 
-    [mysqld]
-    ...
-    character-set-server=utf8 
-    collation-server=utf8_unicode_ci 
-    ...
-    
-####Sinatra####
+I am using RSpec for testing as I like its syntax.
 
-Dev server (WEBrick) is started using rack:  
+Note -
+Must install __rspec-rails__ gem for easy integration.
 
-    rackup -p 3000
+To generate spec environment in a rails app:
+`rails generate rspec:install`
 
+To run spec tests:
+`bundle exec rspec`
 
-Alternatively, we can use the Thin web server:  
+Shortcut (available since rails 4):
+`bundle binstub rspec-core`
 
-    rackup -p 3000 -s thin
-    
+We can run our tests by issuing:
+`bin/rspec`
+
+I have had trouble seeding the test db. A workaround is to temporarily set the database using:
+`bin/rails db:environment:set RAILS_ENV=test`
+
+Then,
+`bin/rails rake db:seed`
+
+#####Web Server#####
+
+It may be that the bin folder is missing. This can be true after a clone. To recreate, use the following:
+`rake rails:update:bin`
+
+I am using Puma as it is installed by default when creating a new Rails app. To access the instance running in the Vagrant VM, start as follows:
+`bundle exec puma`
+
+#####Deployment#####
+
+In the app
+* make sure the environment variables are set up
+* make sure you add the [buildpack](https://github.com/bundler/heroku-buildpack-bundler2.git) (bundle 2 needs help)
+
+[git push helper](https://help.github.com/articles/pushing-to-a-remote/)
+
+`git push heroku rails-5.0:master`
+

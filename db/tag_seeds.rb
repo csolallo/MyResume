@@ -1,7 +1,7 @@
 def get_tag(name)
-  tag = Resume::Models::Tag.find_by_name(name)
+  tag = Tag.find_by_name(name)
   if tag.nil?
-    tag = Resume::Models::Tag.create(
+    tag = Tag.create(
       name: name
     )
   end
@@ -61,7 +61,7 @@ xquery = get_tag 'XQuery'
 delphi = get_tag 'Delphi 5/6'
 
 
-co = Resume::Models::Company.find_by_name('Providence Health & Services')
+co = Company.find_by_name('Providence Health & Services')
 
 proj1 = co.roles[0].projects.find_by_name('Indoor way-finding pilot')
 [obj_c, beacon].each { |tag| proj1.tags << tag }
@@ -71,13 +71,13 @@ proj2 = co.roles[0].projects.find_by_name('Providence mobile app')
 [obj_c, ci, phonegap, android, linux, virtualbox, jira, gitlab].each { |tag| proj2.tags << tag }
 proj2.save!
 
-co = Resume::Models::Company.find_by_name('HighPoint')
+co = Company.find_by_name('HighPoint')
 
 proj1 = co.roles[0].projects[0]
 [obj_c, phonegap, android, php, codeigniter, js, jquery, backbone, require, bootstrap, html5, css, jenkins, jira].each { |tag| proj1.tags << tag }
 proj1.save!
 
-co = Resume::Models::Company.find_by_name('Starbucks')
+co = Company.find_by_name('Starbucks')
 
 role = co.roles.find_by_title('Sr. Software Developer')
 proj1 = role.projects.find_by_name('Starbucks iOS App')
@@ -92,13 +92,13 @@ proj3 = role.projects.find_by_name('Drive-thru iPad App')
 [obj_c, swizzle].each { |tag| proj3.tags << tag }
 proj3.save!
 
-co = Resume::Models::Company.find_by_name('Yorder')
+co = Company.find_by_name('Yorder')
 
 proj1 = co.roles[0].projects[0]
 [obj_c, instruments, php, codeigniter, ruby].each { |tag| proj1.tags << tag}
 proj1.save!
 
-co = Resume::Models::Company.find_by_name('ALLDATA/Autozone')
+co = Company.find_by_name('ALLDATA/Autozone')
 
 proj1 = co.roles[0].projects.find_by_name('AllData/DiY')
 [java, spring, struts, informix, jenkins, svn, tomcat].each { |tag| proj1.tags << tag }
@@ -112,7 +112,7 @@ proj3 = co.roles[0].projects.find_by_name('iShop 3 Enterprise Web Service')
 [java, jaxp, xml, xsl, informix, flex].each { |tag| proj3.tags << tag }
 proj3.save!
 
-co = Resume::Models::Company.find_by_name('ISingleton, Inc.')
+co = Company.find_by_name('ISingleton, Inc.')
 
 proj1 = co.roles.find_by_title('Software Developer/Architect').projects.find_by_name('Multimedia content management system')
 [win32, dotnet, wse3, aspnet].each { |tag| proj1.tags << tag }
@@ -127,7 +127,7 @@ proj3 = co.roles.find_by_title('Technical Lead/Architect').projects.find_by_name
 proj3.save!
 
 
-co = Resume::Models::Company.find_by_name('Requested')
+co = Company.find_by_name('Requested')
 role = co.roles.find_by_title('Software Engineer/Technologist')
 
 proj = role.projects.find_by_name('Support and on-boarding web application')
