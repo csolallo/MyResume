@@ -13,6 +13,8 @@ end
 group :development do
   gem 'byebug', platform: :mri
   gem 'listen', '~> 3.0.4'
+  gem 'debase'
+  gem 'ruby-debug-ide'
 end
 
 group :test do

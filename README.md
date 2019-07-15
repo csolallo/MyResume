@@ -1,48 +1,13 @@
 ###Development Notes###
 
-####Vagrant####
-
-We are using the following base box:
-
-[bento/debian-8.5](https://atlas.hashicorp.com/bento/boxes/debian-8.5)
-
-The following ports should be forwarded:
-
-|Port | Service|
-|-----|--------|
-|3306 | Mysql  |
-|3000 | Rails  |
-
-If using __Parallels__, install the [Vagrant Parallels plugin](https://github.com/Parallels/vagrant-parallels)
-
 The app has a dependency on the uuidgen utility that is not installed by default on debian. It can be installed using apt-get:
 `apt-get install uuid-runtime`
-
-Misc. notes on vagrant:
-
-Vagrant will sometimes not free port forwards on halt (known issue). To fix:
-
-* remove all unused forwards in:
-sudo vi /Library/Preferences/VMware\ Fusion/vmnet8/nat.conf
-
-* restart vmnet-cli:
-sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --stop
-sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --start
 
 ####Database####
 
 Datbase is now hosted on and managed by ClearDB. I'm now using Heroku.
   
 ####Rails####
-
-If building Ruby from source:
-
-Uninstall existing ruby package
-
-Before building on debian:
-
-    sudo apt-get install libssl-dev
-    sudo apt-get install zlib1g-dev
     
 #####DB Config#####
 
@@ -83,11 +48,17 @@ It may be that the bin folder is missing. This can be true after a clone. To rec
 I am using Puma as it is installed by default when creating a new Rails app. To access the instance running in the Vagrant VM, start as follows:
 `bundle exec puma`
 
+#####Debugging locally#####
+
+I debug using rdebug-ide and vscode. The commandline to initiate an rdebug-ide session is:  
+`bundle exec rdebug-ide --debug --host 0.0.0.0 --port 1234 -- bin/rails s -p 3001 -b 0.0.0.0`
+
+[Debugging Recipes from Microsoft](https://github.com/microsoft/vscode-recipes/tree/master/debugging-Ruby-on-Rails)
+
 #####Deployment#####
 
 In the app
 * make sure the environment variables are set up
-* make sure you add the [buildpack](https://github.com/bundler/heroku-buildpack-bundler2.git) (bundle 2 needs help)
 
 [git push helper](https://help.github.com/articles/pushing-to-a-remote/)
 
