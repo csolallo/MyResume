@@ -27,6 +27,8 @@ module MyResume
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.i18n.fallbacks = [I18n.default_locale]
+
     # Rails no longer adds lib to the autoload path by default. Let's make it do that
     config.autoload_paths << "#{Rails.root}/lib"
   end

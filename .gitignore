@@ -1,16 +1,13 @@
-config/*.sh
-*.komodoproject
-
-config/source.me
+scripts/*.txt
 docs
+
+# Development related
 .rspec
-spec/spec_helper.rb
+tmp
+.byebug_history
+*.log
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-
-# vagrant
-.vagrant
-

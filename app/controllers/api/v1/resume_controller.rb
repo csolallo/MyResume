@@ -3,7 +3,7 @@ module Api::V1
     before_action :get_resume
 
     rescue_from Exceptions::ResumeNotFound, Exceptions::JobsNotFound, Exceptions::TagsNotFound do
-      render nothing: true, status: 404
+      render body: nil, status: 404
     end
 
     def jobs

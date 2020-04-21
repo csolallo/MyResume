@@ -3,7 +3,7 @@ module Api::V1
     before_action :get_person
 
     rescue_from Exceptions::PersonNotFound, Exceptions::ResumeNotFound do
-      render nothing: true, status: 404
+      render body: nil, status: 404
     end
 
     def info
