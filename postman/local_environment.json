@@ -1,5 +1,5 @@
 {
-	"id": "aa56dc1a-5e86-49db-aaa2-4720451a8aff",
+	"id": "33ac8328-d531-4963-8517-ad0ef20cccb2",
 	"name": "myResume_local",
 	"values": [
 		{
@@ -29,6 +29,6 @@
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2019-02-11T06:38:14.721Z",
-	"_postman_exported_using": "Postman/6.7.3"
+	"_postman_exported_at": "2020-04-21T20:32:10.492Z",
+	"_postman_exported_using": "Postman/7.22.1"
 }
