@@ -5,8 +5,18 @@ The app has a dependency on the uuidgen utility that is not installed by default
 
 ####Database####
 
-Datbase is now hosted on and managed by ClearDB. I'm now using Heroku.
+Database is now hosted on and managed by ClearDB. I'm now using Heroku.
   
+It is not possible to shell into the slug and run apt-get. Therefore, it is **not** possible to run migrations and seeds from the slug. 
+  
+Run in dev machine using rake and the heroku command line:
+
+```
+heroku run rake db:migrate VERSION=0
+heroku run rake db:migrate
+heroku run rake db:seed
+```
+
 ####Rails####
     
 #####DB Config#####
