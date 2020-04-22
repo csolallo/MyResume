@@ -10,6 +10,9 @@ end
 
 obj_c = get_tag 'objective-c'
 swift = get_tag 'Swift'
+redux = get_tag 'Redux'
+rxswift = get_tag 'RxSwift'
+aspnet = get_tag 'ASP.NET' 
 mdm = get_tag 'MDM'
 android = get_tag 'android'
 php = get_tag 'android'
@@ -138,3 +141,10 @@ proj = role.projects.find_by_name('Merchant app')
 
 proj = role.projects.find_by_name('Consumer app')
 [swift, obj_c, phonegap, js].each { |tag| proj.tags << tag }
+
+
+co = Company.find_by_name('Providence Health & Services')
+role = co.roles.find_by_title('Sr. Software Engineer')
+
+proj = role.projects.find_by_name('iOS ExpressCare mobile app')
+[swift, redux, rxswift, aspnet].each { |tag| proj.tags << tag } 

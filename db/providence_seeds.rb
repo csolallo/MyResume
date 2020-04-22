@@ -1,13 +1,17 @@
 company_name = 'Providence Health & Services'
-Company.create(
-  name: company_name,
-  address1: '2201 Lind Ave SW',
-  city: 'Renton',
-  state: 'WA',
-  zip: '98057'
-)
 
 company = Company.find_by_name(company_name)
+if company.nil?
+  Company.create(
+    name: company_name,
+    address1: '2201 Lind Ave SW',
+    city: 'Renton',
+    state: 'WA',
+    zip: '98057'
+  )
+  company = Company.find_by_name(company_name)
+end
+
 company.roles.create(
   title: 'Principal Developer (mobile)',
   start_date: '8/1/2014'.to_date,

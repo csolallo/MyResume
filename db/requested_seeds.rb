@@ -82,6 +82,7 @@ project.accomplishments.create(
 project.apps.create(
     name: 'Requested',
     platform: 'iOS',
-    url: 'https://itunes.apple.com/us/app/requested/id916399770?ls=1&mt=8',
-    image_url: 'http://a3.mzstatic.com/us/r30/Purple49/v4/e5/be/3a/e5be3a4f-9676-f8dd-e48a-6b27e994ada3/icon175x175.jpeg'
+    url: '',
+    image_url: '',
+    comment: 'The app is no longer available for sale.'
 )

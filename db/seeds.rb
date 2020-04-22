@@ -8,6 +8,7 @@ end
 
 if Company.find_by_name('Providence Health & Services').nil?
   require_relative 'providence_seeds'
+  require_relative 'providence2_seeds'
 end
 
 if Company.find_by_name('HighPoint').nil?
