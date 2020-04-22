@@ -132,7 +132,7 @@ config.add_setting :invalid_id
 
   config.add_setting :info
   config.info = {
-      :uuid => '0aa978f2-6233-4914-8164-625ed09fcbd5',
+      :uuid => '482f55cd-76f7-4aa3-a756-f74219cdf3d0',
       :name => 'Carlos Sola-Llonch'
   }
 

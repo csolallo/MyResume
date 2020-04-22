@@ -10,12 +10,15 @@ end
 
 obj_c = get_tag 'objective-c'
 swift = get_tag 'Swift'
+typescript = get_tag 'TypeScript'
 redux = get_tag 'Redux'
 rxswift = get_tag 'RxSwift'
 aspnet = get_tag 'ASP.NET' 
 mdm = get_tag 'MDM'
 android = get_tag 'android'
-php = get_tag 'android'
+ios = get_tag 'iOS'
+reactnative = get_tag 'React-Native'
+php = get_tag 'PHP'
 codeigniter = get_tag 'CodeIgniter'
 js = get_tag 'JavaScript'
 jquery = get_tag 'JQuery'
@@ -148,3 +151,15 @@ role = co.roles.find_by_title('Sr. Software Engineer')
 
 proj = role.projects.find_by_name('iOS ExpressCare mobile app')
 [swift, redux, rxswift, aspnet].each { |tag| proj.tags << tag } 
+
+co = Company.find_by_name('Best Buy')
+role = co.roles.find_by_title('Sr. Software Engineer')
+
+proj = role.projects.find_by_name('Insignia iOS app')
+[swift, obj_c].each { |tag| proj.tags << tag }
+
+proj = role.projects.find_by_name('Home iOS app')
+[swift, obj_c].each { |tag| proj.tags << tag }
+
+proj = role.projects.find_by_name('GreatCall Link app')
+[typescript, reactnative, js, android, ios].each { |tag| proj.tags << tag }
