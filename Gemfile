@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "~> 2.6.0"
+ruby "~> 2.7.0"
 
 gem 'rails', '~> 5.1'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
@@ -8,9 +8,6 @@ gem 'puma', '~> 3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'rack-cors'
 gem 'graphql'
-
-group :development, :test do
-end
 
 group :development do
   gem 'byebug', platform: :mri
