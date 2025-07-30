@@ -12,11 +12,12 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-# The `.rspec` file also contains a few flags that are not defaults but that
-# users commonly want.
+# See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+# 
 #
-# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 RSpec.configure do |config|
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -64,9 +65,7 @@ RSpec.configure do |config|
 
   # Limits the available syntax to the non-monkey patched syntax that is
   # recommended. For more details, see:
-  #   - http://rspec.info/blog/2012/06/rspecs-new-expectation-syntax/
-  #   - http://www.teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/
-  #   - http://rspec.info/blog/2014/05/notable-changes-in-rspec-3/#zero-monkey-patching-mode
+  # https://rspec.info/features/3-12/rspec-core/configuration/zero-monkey-patching-mode/
   config.disable_monkey_patching!
 
   # Many RSpec users commonly either run the entire suite or an individual
@@ -76,7 +75,7 @@ RSpec.configure do |config|
     # Use the documentation formatter for detailed output,
     # unless a formatter has already been configured
     # (e.g. via a command-line flag).
-    config.default_formatter = 'doc'
+    config.default_formatter = "doc"
   end
 
   # Print the 10 slowest examples and example groups at the
@@ -97,13 +96,11 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-config.add_setting :invalid_id
+  config.add_setting :invalid_id
   config.invalid_id = 9999
-
 
   config.add_setting :valid_person_id
   config.valid_person_id = 1
-
 
   config.add_setting :valid_resume_id
   config.valid_resume_id = 1
@@ -112,34 +109,23 @@ config.add_setting :invalid_id
   config.add_setting :valid_job_id
   config.valid_job_id = 2
 
-
   # a project that can be used to test accomplishments, tags, apps, etc.
   config.add_setting :valid_project_id
   config.valid_project_id = 6
 
-
   config.add_setting :valid_tag_id
   config.valid_tag_id = 12
-
 
   config.add_setting :valid_tag_array
   config.valid_tag_array = "12,32"
 
-
   config.add_setting :last_job_start_date
   config.last_job_start_date = '4/1/2015'
-
-
-  config.add_setting :info
-  config.info = {
-      :uuid => '482f55cd-76f7-4aa3-a756-f74219cdf3d0',
-      :name => 'Carlos Sola-Llonch'
-  }
-
 
   config.add_setting :education
   config.education = {
       :origin => 'Florida International University',
       :year => 1991
   }
+
 end

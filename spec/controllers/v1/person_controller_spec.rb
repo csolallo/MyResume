@@ -8,16 +8,16 @@ RSpec.describe Api::V1::PersonController, type: :controller do
   end
 
   it "info method is valid" do
-    get :info, :params => {:uuid => RSpec.configuration.info[:uuid], :format => 'json'}
+    get :info, :params => {:uuid => Rails.application.config.info[:uuid], :format => 'json'}
     expect(response.ok?).to be true
 
     #ensure we get valid json
     expect { $info = JSON.parse response.body }.not_to raise_error
-    expect($info['name']).to eq(RSpec.configuration.info[:name]);
+    expect($info['name']).to eq(Rails.application.config.info[:name]);
   end
 
   it "education method is valid" do
-    get :education, :params => {:uuid => RSpec.configuration.info[:uuid], :format => 'json'}
+    get :education, :params => {:uuid => Rails.application.config.info[:uuid], :format => 'json'}
     expect(response.ok?).to be true
 
     expect { $arrEducation = JSON.parse response.body }.not_to raise_error
@@ -29,7 +29,7 @@ RSpec.describe Api::V1::PersonController, type: :controller do
   end
 
   it "highlights method is valid" do
-    get :highlights, :params => {:uuid => RSpec.configuration.info[:uuid], :format => 'json'}
+    get :highlights, :params => {:uuid => Rails.application.config.info[:uuid], :format => 'json'}
     expect(response.ok?).to be true
 
     expect { $arrHighlights = JSON.parse response.body }.not_to raise_error
@@ -37,7 +37,7 @@ RSpec.describe Api::V1::PersonController, type: :controller do
   end
 
   it "resume method is valid" do
-    get :resume, :params => {:uuid => RSpec.configuration.info[:uuid], :format => 'json'}
+    get :resume, :params => {:uuid => Rails.application.config.info[:uuid], :format => 'json'}
     expect(response.ok?).to be true
 
     expect { $resume = JSON.parse response.body }.not_to raise_error

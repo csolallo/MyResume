@@ -4,5 +4,5 @@ class Project < ApplicationRecord
   has_and_belongs_to_many :tags
   has_many :apps
 
-  scope :in_resume, -> (resume){ distinct.joins(job: :resume).where("`resumes`.`id` = ?", resume) }
+  scope :in_resume, -> (resume){ distinct.joins(job: :resume).where("""resumes"".""id"" = ?", resume) }
 end

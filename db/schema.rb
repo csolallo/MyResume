@@ -2,17 +2,19 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2016_09_08_192729) do
+ActiveRecord::Schema[8.0].define(version: 2016_09_08_192729) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_catalog.plpgsql"
 
-  create_table "accomplishments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "accomplishments", id: :serial, force: :cascade do |t|
     t.text "description", null: false
     t.string "associated_type"
     t.integer "associated_id"
@@ -20,7 +22,7 @@ ActiveRecord::Schema.define(version: 2016_09_08_192729) do
     t.index ["associated_type", "associated_id"], name: "index_accomplishments_on_associated_type_and_associated_id"
   end
 
-  create_table "apps", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "apps", id: :serial, force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.string "platform", limit: 50, null: false
     t.string "url", limit: 100, null: false
@@ -30,7 +32,7 @@ ActiveRecord::Schema.define(version: 2016_09_08_192729) do
     t.index ["project_id"], name: "index_apps_on_project_id"
   end
 
-  create_table "certificates", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "certificates", id: :serial, force: :cascade do |t|
     t.string "origin", limit: 100, null: false
     t.string "title", limit: 100, null: false
     t.float "gpa"
@@ -39,7 +41,7 @@ ActiveRecord::Schema.define(version: 2016_09_08_192729) do
     t.index ["person_id"], name: "index_certificates_on_person_id"
   end
 
-  create_table "companies", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "companies", id: :serial, force: :cascade do |t|
     t.string "name", null: false
     t.string "address1"
     t.string "address2"
@@ -48,7 +50,7 @@ ActiveRecord::Schema.define(version: 2016_09_08_192729) do
     t.string "zip", limit: 10
   end
 
-  create_table "people", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "people", id: :serial, force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.string "uuid", null: false
     t.string "address1"
@@ -60,37 +62,36 @@ ActiveRecord::Schema.define(version: 2016_09_08_192729) do
     t.string "number", limit: 20
   end
 
-  create_table "projects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "projects", id: :serial, force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
     t.integer "role_id", null: false
     t.index ["role_id"], name: "index_projects_on_role_id"
   end
 
-  create_table "projects_tags", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "projects_tags", id: false, force: :cascade do |t|
     t.integer "project_id", null: false
     t.integer "tag_id", null: false
     t.index ["project_id", "tag_id"], name: "index_projects_tags_on_project_id_and_tag_id"
   end
 
-  create_table "resumes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "resumes", id: :serial, force: :cascade do |t|
     t.integer "person_id", null: false
     t.index ["person_id"], name: "index_resumes_on_person_id"
   end
 
-  create_table "roles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "roles", id: :serial, force: :cascade do |t|
     t.string "title", null: false
-    t.datetime "start_date", null: false
-    t.datetime "end_date"
+    t.datetime "start_date", precision: nil, null: false
+    t.datetime "end_date", precision: nil
     t.integer "resume_id"
     t.integer "company_id", null: false
     t.index ["company_id"], name: "index_roles_on_company_id"
     t.index ["resume_id"], name: "index_roles_on_resume_id"
   end
 
-  create_table "tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name", limit: 30, null: false
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
-
 end

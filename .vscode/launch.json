@@ -5,12 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Listen for rdebug-ide",
-            "type": "Ruby",
-            "request": "attach",
-            "remoteHost": "127.0.0.1",
-            "remotePort": "1234",
-            "remoteWorkspaceRoot": "${workspaceRoot}"
+            "type": "ruby-debug",
+            "request": "launch",
+            "name": "RSpec (Active File)",
+            "program": "rspec",
+            "programArgs": [
+                "-I",
+                "${workspaceFolder}",
+                "${file}"
+            ],
+            "useBundler": true
         }
     ]
 }
