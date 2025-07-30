@@ -1,16 +1,5 @@
-# MySQL. Versions 5.0 and up are supported.
-#
-# Install the MySQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem 'mysql2'
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
-#
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   pool: 5
@@ -23,13 +12,12 @@ development:
   <<: *default
   database: <%= ENV['RDS_DB_NAME'] %>
 
-
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <%= ENV['RDS_DB_NAME'] %>
+  database: myresume_test
 
 production:
   <<: *default

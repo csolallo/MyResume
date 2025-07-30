@@ -12,12 +12,12 @@ describe Person do
   
   it "find by id" do
     person = Person.find(RSpec.configuration.valid_person_id)
-    expect(person.name).to eq(RSpec.configuration.info[:name])
+    expect(person.name).to eq(Rails.application.config.info[:name])
   end
   
   it "find by uuid" do
-    person = Person.find_by_uuid(RSpec.configuration.info[:uuid])
-    expect(person.name).to eq(RSpec.configuration.info[:name])
+    person = Person.find_by_uuid(Rails.application.config.info[:uuid])
+    expect(person.name).to eq(Rails.application.config.info[:name])
   end
   
   it "person should have one resume" do

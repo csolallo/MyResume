@@ -39,4 +39,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  # 
+  
+  config.info = {
+      :uuid => '6fd2bf66-24c8-4aa1-9ae2-cb81e9a7f483',
+      :name => 'Carlos Sola-Llonch'
+  }
 end

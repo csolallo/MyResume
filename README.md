@@ -4,10 +4,6 @@ The app has a dependency on the uuidgen utility that is not installed by default
 `apt-get install uuid-runtime`
 
 ####Database####
-
-Database is now hosted on and managed by ClearDB. I'm now using Heroku.
-  
-It is not possible to shell into the slug and run apt-get. Therefore, it is **not** possible to run migrations and seeds from the slug. 
   
 Run in dev machine using rake and the heroku command line:
 
@@ -44,11 +40,20 @@ Shortcut (available since rails 4):
 We can run our tests by issuing:
 `bin/rspec`
 
-I have had trouble seeding the test db. A workaround is to temporarily set the database using:
-`bin/rails db:environment:set RAILS_ENV=test`
+To reset the test db and also seed it you can:  
+`bundle exec rails db:reset RAILS_ENV=test`
 
-Then,
-`bin/rails rake db:seed`
+Alternatively, you can do each step individually:
+```
+bundle exec rails db:schema:load RAILS_ENV=test
+bundle exec rails db:seed RAILS_ENV=test
+
+or
+
+bundle exec rails db:environment:set RAILS_ENV=test
+bundle exec rails db:schema:load
+bundle exec rails db:seed
+```
 
 #####Web Server#####
 
@@ -60,10 +65,7 @@ I am using Puma as it is installed by default when creating a new Rails app. To 
 
 #####Debugging locally#####
 
-I debug using rdebug-ide and vscode. The commandline to initiate an rdebug-ide session is:  
-`bundle exec rdebug-ide --debug --host 0.0.0.0 --port 1234 -- bin/rails s -p 3001 -b 0.0.0.0`
-
-[Debugging Recipes from Microsoft](https://github.com/microsoft/vscode-recipes/tree/master/debugging-Ruby-on-Rails)
+Outside of VSCode, I use the byebug gem. It is handy for debugging migrations and seeds. In VSCode, I use [the ruby debug gem](https://marketplace.visualstudio.com/items?itemName=castwide.ruby-debug)
 
 #####Deployment#####
 
