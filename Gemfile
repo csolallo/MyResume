@@ -10,7 +10,8 @@ gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 gem 'graphql'
 
 group :development do
-  gem 'byebug', platform: :mri
+  gem 'bake', '~> 0.24.0'
+  gem "localhost", ">= 1.3"
   gem 'listen', '~> 3.1', '>= 3.1.5'
   gem "debug"
   gem 'observer'
