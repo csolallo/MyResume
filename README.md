@@ -60,14 +60,19 @@ bundle exec rails db:seed
 It may be that the bin folder is missing. This can be true after a clone. To recreate, use the following:
 `rake rails:update:bin`
 
-I am using Puma as it is installed by default when creating a new Rails app. To access the instance running in the Vagrant VM, start as follows:
-`bundle exec puma`
-
 ##### Debugging locally #####
 
 I use [the debug gem](https://github.com/ruby/debug?tab=readme-ov-file). 
 
-I've added  __require "debug/open_nonstop"__ to the development config file so in VSCode if the "VSCode rdbg Ruby Debugger" is installed you can attach and debug in the IDE
+I've added  __require "debug/open_nonstop"__ to the development config file so in VSCode if the "VSCode rdbg Ruby Debugger" is installed you can attach and debug in the IDE.
+
+To debug the api using Thunder Client, it is not necessary to use a self-signed local host cert. So launch the web server as:
+`bundle exec rails s -b 0.0.0.0 -p 3001` 
+
+To debug the graphql types, it *is* necessary to connect via https and so a self-signed certificate is necessary.  Follow the instructions for [the localhost gem](https://github.com/socketry/localhost?tab=readme-ov-file). Then launch the server as:
+`bundle exec rails s -b ssl://localhost:3001`
+
+Note, the api can also be debugged, but the host name must be localhost
 
 ##### Deployment #####
 
