@@ -12,9 +12,8 @@ gem 'graphql'
 group :development do
   gem 'byebug', platform: :mri
   gem 'listen', '~> 3.1', '>= 3.1.5'
+  gem "debug"
   gem 'observer'
-  gem 'ostruct'
-  gem 'readapt'
 end
 
 group :test do
