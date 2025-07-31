@@ -28,16 +28,16 @@ I am using RSpec for testing as I like its syntax.
 Note -
 Must install __rspec-rails__ gem for easy integration.
 
-To generate spec environment in a rails app:
+To generate spec environment in a rails app:  
 `rails generate rspec:install`
 
-To run spec tests:
+To run spec tests:  
 `bundle exec rspec`
 
-Shortcut (available since rails 4):
+Shortcut (available since rails 4):  
 `bundle binstub rspec-core`
 
-We can run our tests by issuing:
+We can run our tests by issuing:  
 `bin/rspec`
 
 To reset the test db and also seed it you can:  
@@ -57,7 +57,7 @@ bundle exec rails db:seed
 
 ##### Web Server #####
 
-It may be that the bin folder is missing. This can be true after a clone. To recreate, use the following:
+It may be that the bin folder is missing. This can be true after a clone. To recreate, use the following:  
 `rake rails:update:bin`
 
 ##### Debugging locally #####
@@ -66,13 +66,15 @@ I use [the debug gem](https://github.com/ruby/debug?tab=readme-ov-file).
 
 I've added  __require "debug/open_nonstop"__ to the development config file so in VSCode if the "VSCode rdbg Ruby Debugger" is installed you can attach and debug in the IDE.
 
-To debug the api using Thunder Client, it is not necessary to use a self-signed local host cert. So launch the web server as:
+To debug the api using Thunder Client, it is not necessary to use a self-signed local host cert. So launch the web server as:  
 `bundle exec rails s -b 0.0.0.0 -p 3001` 
 
-To debug the graphql types, it *is* necessary to connect via https and so a self-signed certificate is necessary.  Follow the instructions for [the localhost gem](https://github.com/socketry/localhost?tab=readme-ov-file). Then launch the server as:
+To debug the graphql types, it *is* necessary to connect via https and so a self-signed certificate is necessary.  Follow the instructions for [the localhost gem](https://github.com/socketry/localhost?tab=readme-ov-file). Then launch the server as:  
 `bundle exec rails s -b ssl://localhost:3001`
 
-Note, the api can also be debugged, but the host name must be localhost
+With the server started, we can use the [Apollo sandbox explorer](https://studio.apollographql.com/sandbox/explorer) (at least for now). The sanbox URL should be `https://localhost:3001/graphql`
+
+Note, the api can also be debugged, but the host name must be __localhost__
 
 ##### Deployment #####
 
