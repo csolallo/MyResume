@@ -65,7 +65,7 @@ I am using Puma as it is installed by default when creating a new Rails app. To 
 
 ##### Debugging locally #####
 
-I use (the debug gem)[https://github.com/ruby/debug?tab=readme-ov-file]. 
+I use [the debug gem](https://github.com/ruby/debug?tab=readme-ov-file). 
 
 I've added  __require "debug/open_nonstop"__ to the development config file so in VSCode if the "VSCode rdbg Ruby Debugger" is installed you can attach and debug in the IDE
 
