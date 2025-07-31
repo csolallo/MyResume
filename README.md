@@ -1,9 +1,9 @@
-###Development Notes###
+### Development Notes ###
 
 The app has a dependency on the uuidgen utility that is not installed by default on debian. It can be installed using apt-get:
 `apt-get install uuid-runtime`
 
-####Database####
+#### Database ####
   
 Run in dev machine using rake and the heroku command line:
 
@@ -13,15 +13,15 @@ heroku run rake db:migrate
 heroku run rake db:seed
 ```
 
-####Rails####
+#### Rails ####
     
-#####DB Config#####
+##### DB Config #####
 
 I follow this strategy for cleansing the database.yml file:
 * In `./scripts/source.sh`, I export the RDS_* environment variables
 * I then make sure to run `source ./scripts/source.sh` before any Rails cli commands
 
-#####Testing#####
+##### Testing #####
 
 I am using RSpec for testing as I like its syntax.
 
@@ -55,7 +55,7 @@ bundle exec rails db:schema:load
 bundle exec rails db:seed
 ```
 
-#####Web Server#####
+##### Web Server #####
 
 It may be that the bin folder is missing. This can be true after a clone. To recreate, use the following:
 `rake rails:update:bin`
@@ -63,11 +63,13 @@ It may be that the bin folder is missing. This can be true after a clone. To rec
 I am using Puma as it is installed by default when creating a new Rails app. To access the instance running in the Vagrant VM, start as follows:
 `bundle exec puma`
 
-#####Debugging locally#####
+##### Debugging locally #####
 
-Outside of VSCode, I use the byebug gem. It is handy for debugging migrations and seeds. In VSCode, I use [the ruby debug gem](https://marketplace.visualstudio.com/items?itemName=castwide.ruby-debug)
+I use (the debug gem)[https://github.com/ruby/debug?tab=readme-ov-file]. 
 
-#####Deployment#####
+I've added  __require "debug/open_nonstop"__ to the development config file so in VSCode if the "VSCode rdbg Ruby Debugger" is installed you can attach and debug in the IDE
+
+##### Deployment #####
 
 In the app
 * make sure the environment variables are set up

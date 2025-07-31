@@ -5,16 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "ruby-debug",
-            "request": "launch",
-            "name": "RSpec (Active File)",
-            "program": "rspec",
-            "programArgs": [
-                "-I",
-                "${workspaceFolder}",
-                "${file}"
-            ],
-            "useBundler": true
+            "name": "rdbg - socket",
+            "type": "rdbg",
+            "request": "attach",
+        },
+        {
+            "name": "rdbg - tcp",
+            "type": "rdbg",
+            "request": "attach",
+            "debugPort": "1234"
         }
+    
     ]
 }
