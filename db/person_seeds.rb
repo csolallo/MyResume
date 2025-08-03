@@ -6,7 +6,7 @@ end
 
 Person.create(
   name: 'Carlos Sola-Llonch',
-  uuid: uuid ||`uuidgen`.chomp!,
+  uuid: uuid ||`cat /proc/sys/kernel/random/uuid`.chomp!,
   address1: '4141 49 Ave SW',
   city: 'Seattle',
   state: 'WA',
