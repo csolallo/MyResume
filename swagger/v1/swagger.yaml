@@ -1,0 +1,100 @@
+---
+openapi: 3.0.1
+info:
+  title: MyResume API
+  version: v1
+paths:
+  "/api/v1/person/{uuid}/info":
+    parameters:
+    - name: uuid
+      in: path
+      required: true
+      description: id of the person being queried
+      schema:
+        type: string
+    get:
+      summary: info
+      description: Get contact information for person
+      tags:
+      - Person
+      responses:
+        '200':
+          description: queried using a valid person id
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - name
+                properties:
+                  name:
+                    type: string
+                    example: Joe User
+                  address1:
+                    type: string
+                    example: 123 Main St.
+                  address2:
+                    type: string
+                    example: Apt. B
+                  city:
+                    type: string
+                    example: Seattle
+                  state:
+                    type: string
+                    example: WA
+                  zip:
+                    type: string
+                    example: '12345'
+                  number:
+                    type: string
+                    example: 206-555-1212
+                  email:
+                    type: string
+                    example: user@company.com
+        '404':
+          description: queried using an invalid person id
+  "/api/v1/person/{uuid}/education":
+    parameters:
+    - name: uuid
+      in: path
+      required: true
+      description: id of the person being queried
+      schema:
+        type: string
+    get:
+      summary: education
+      description: Get education history and certificates for person
+      tags:
+      - Person
+      responses:
+        '200':
+          description: queried using a valid person id
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - origin
+                  - title
+                  properties:
+                    origin:
+                      type: string
+                      example: University of Washington
+                    title:
+                      type: string
+                      example: B.S. Computer Science
+                    gpa:
+                      type: string
+                      example: '3.0'
+                    year:
+                      type: integer
+                      example: 1990
+        '404':
+          description: queried using an invalid person id
+servers:
+- url: https://resume.sola-llon.ch
+  description: Production environment
+- url: https://localhost:3001
+  description: Testing environment. Internal use only

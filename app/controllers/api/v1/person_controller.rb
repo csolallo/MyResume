@@ -2,7 +2,7 @@ module Api::V1
   class PersonController < ApplicationController
     before_action :get_person
 
-    rescue_from Exceptions::PersonNotFound, Exceptions::ResumeNotFound do
+    rescue_from Errors::PersonNotFound, Errors::ResumeNotFound do
       render body: nil, status: 404
     end
 
@@ -53,12 +53,12 @@ module Api::V1
 
     def get_person
       @person = Person.find_by_uuid params[:uuid]
-      raise Exceptions::PersonNotFound if @person.nil?
+      raise Errors::PersonNotFound if @person.nil?
     end
 
     def get_resume
       @resume = Resume.for_person(@person).first
-      raise Exceptions::ResumeNotFound if @resume.nil?
+      raise Errors::ResumeNotFound if @resume.nil?
     end
   end
 end

@@ -1,4 +1,4 @@
-module Exceptions
+module Errors
   class PersonNotFound < ActiveRecord::RecordNotFound; end
 
   class ResumeNotFound < ActiveRecord::RecordNotFound; end
