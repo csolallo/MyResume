@@ -72,6 +72,8 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     bake (0.24.0)
       bigdecimal
       samovar (~> 2.1)
@@ -116,6 +118,9 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.13.2)
+    json-schema (5.2.2)
+      addressable (~> 2.8)
+      bigdecimal (~> 3.1)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -146,6 +151,7 @@ GEM
     nokogiri (1.18.9-x86_64-linux-gnu)
       racc (~> 1.4)
     observer (0.1.2)
+    ostruct (0.6.3)
     pg (1.6.0-x86_64-linux)
     pp (0.6.2)
       prettyprint
@@ -153,6 +159,7 @@ GEM
     psych (5.2.6)
       date
       stringio
+    public_suffix (6.0.2)
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -225,6 +232,17 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.4)
+    rswag-api (2.16.0)
+      activesupport (>= 5.2, < 8.1)
+      railties (>= 5.2, < 8.1)
+    rswag-specs (2.16.0)
+      activesupport (>= 5.2, < 8.1)
+      json-schema (>= 2.2, < 6.0)
+      railties (>= 5.2, < 8.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.16.0)
+      actionpack (>= 5.2, < 8.1)
+      railties (>= 5.2, < 8.1)
     samovar (2.3.0)
       console (~> 1.0)
       mapping (~> 1.0)
@@ -254,6 +272,7 @@ DEPENDENCIES
   listen (~> 3.1, >= 3.1.5)
   localhost (>= 1.3)
   observer
+  ostruct
   pg (~> 1.5, >= 1.5.9)
   puma (~> 6.4, >= 6.4.2)
   rack-cors (~> 1.1, >= 1.1.1)
@@ -261,6 +280,9 @@ DEPENDENCIES
   rails (~> 8.0.0)
   rspec (~> 3.13, >= 3.13.1)
   rspec-rails (~> 8.0, >= 8.0.1)
+  rswag-api
+  rswag-specs
+  rswag-ui
 
 RUBY VERSION
    ruby 3.4.5p51
