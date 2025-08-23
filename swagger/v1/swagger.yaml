@@ -93,6 +93,59 @@ paths:
                       example: 1990
         '404':
           description: queried using an invalid person id
+  "/api/v1/person/{uuid}/highlights":
+    parameters:
+    - name: uuid
+      in: path
+      required: true
+      description: id of the person being queried
+      schema:
+        type: string
+    get:
+      summary: career highlights
+      description: Bulleted list of career highlights for person
+      tags:
+      - Person
+      responses:
+        '200':
+          description: queried with a valid person id
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: Over a decade of engineering leadership
+        '404':
+          description: queried using invalid person id
+  "/api/v1/person/{uuid}/resume":
+    parameters:
+    - name: uuid
+      in: path
+      required: true
+      description: id of the person being queried
+      schema:
+        type: string
+    get:
+      summary: resume id
+      description: get the id of the resume associated with person
+      tags:
+      - Person
+      responses:
+        '200':
+          description: queried with valid person id
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - resume
+                properties:
+                  resume:
+                    type: integer
+                    example: 1
+        '404':
+          description: queried using an invalid person id
 servers:
 - url: https://resume.sola-llon.ch
   description: Production environment
