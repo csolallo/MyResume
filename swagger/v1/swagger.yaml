@@ -29,28 +29,20 @@ paths:
                 properties:
                   name:
                     type: string
-                    example: Joe User
                   address1:
                     type: string
-                    example: 123 Main St.
                   address2:
                     type: string
-                    example: Apt. B
                   city:
                     type: string
-                    example: Seattle
                   state:
                     type: string
-                    example: WA
                   zip:
                     type: string
-                    example: '12345'
                   number:
                     type: string
-                    example: 206-555-1212
                   email:
                     type: string
-                    example: user@company.com
         '404':
           description: queried using an invalid person id
   "/api/v1/person/{uuid}/education":
@@ -81,16 +73,12 @@ paths:
                   properties:
                     origin:
                       type: string
-                      example: University of Washington
                     title:
                       type: string
-                      example: B.S. Computer Science
                     gpa:
                       type: string
-                      example: '3.0'
                     year:
                       type: integer
-                      example: 1990
         '404':
           description: queried using an invalid person id
   "/api/v1/person/{uuid}/highlights":
@@ -115,7 +103,6 @@ paths:
                 type: array
                 items:
                   type: string
-                  example: Over a decade of engineering leadership
         '404':
           description: queried using invalid person id
   "/api/v1/person/{uuid}/resume":
@@ -143,9 +130,151 @@ paths:
                 properties:
                   resume:
                     type: integer
-                    example: 1
         '404':
           description: queried using an invalid person id
+  "/api/v1/resume/{id}/jobs":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: id of the desired resume
+      schema:
+        type: integer
+    - name: since
+      in: query
+      required: false
+      description: only list jobs on or after this date
+      schema:
+        type: string
+    get:
+      summary: jobs
+      description: Get job details for the resume
+      tags:
+      - Resume
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - companies
+                - jobs
+                properties:
+                  companies:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - id
+                      - name
+                      - address1
+                      - address2
+                      - city
+                      - state
+                      - zip
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        address1:
+                          type: string
+                          nullable: true
+                        address2:
+                          type: string
+                          nullable: true
+                        city:
+                          type: string
+                          nullable: true
+                        state:
+                          type: string
+                          nullable: true
+                        zip:
+                          type: string
+                          nullable: true
+                  jobs:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - title
+                      - start_date
+                      - end_date
+                      - company_id
+                      - projects
+                      properties:
+                        title:
+                          type: string
+                        start_date:
+                          type: string
+                          format: date-time
+                        end_date:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        company_id:
+                          type: integer
+                        projects:
+                          type: array
+                          items:
+                            type: object
+                            required:
+                            - name
+                            - description
+                            - accomplishments
+                            - tags
+                            properties:
+                              name:
+                                type: string
+                              description:
+                                type: string
+                              accomplishments:
+                                type: array
+                                items:
+                                  type: object
+                                  required:
+                                  - description
+                                  properties:
+                                    description:
+                                      type: string
+                              apps:
+                                type: array
+                                items:
+                                  type: object
+                                  required:
+                                  - name
+                                  - platform
+                                  - url
+                                  - comment
+                                  - image_url
+                                  properties:
+                                    name:
+                                      type: string
+                                    platform:
+                                      type: string
+                                    url:
+                                      type: string
+                                      nullable: true
+                                    commment:
+                                      type: string
+                                      nullable: true
+                                    image_url:
+                                      type: string
+                                      nullable: true
+                              tags:
+                                type: array
+                                items:
+                                  type: object
+                                  required:
+                                  - id
+                                  - name
+                                  properties:
+                                    id:
+                                      type: integer
+                                    name:
+                                      type: string
 servers:
 - url: https://resume.sola-llon.ch
   description: Production environment

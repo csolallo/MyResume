@@ -21,10 +21,7 @@ RSpec.configure do |config|
         title: 'MyResume API',
         version: 'v1'
       },
-      paths: {
-
-       
-      },
+      paths: {},
       servers: [
         {
           url: 'https://resume.sola-llon.ch',

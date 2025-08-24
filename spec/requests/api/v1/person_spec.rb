@@ -30,36 +30,28 @@ RSpec.describe 'person endpoints', type: :request do
           required: %w(name),
           properties: {
             name: {
-              type: 'string',
-              example: 'Joe User'
+              type: 'string'
             },
             address1: {
-              type: 'string',
-              example: '123 Main St.'
+              type: 'string'
             },
             address2: {
-              type: 'string',
-              example: 'Apt. B'
+              type: 'string'
             },
             city: {
-              type: 'string',
-              example: 'Seattle'
+              type: 'string'
             },
             state: {
-              type: 'string',
-              example: 'WA'
+              type: 'string'
             },
             zip: {
-              type: 'string',
-              example: '12345'
+              type: 'string'
             },
             number: {
-              type: 'string',
-              example: '206-555-1212'
+              type: 'string'
             },
             email: {
-              type: 'string',
-              example: 'user@company.com'
+              type: 'string'
           }
         }
         
@@ -89,20 +81,16 @@ RSpec.describe 'person endpoints', type: :request do
           required: %w(origin title),
           properties: {
             origin: {
-              type: 'string',
-              example: 'University of Washington'
+              type: 'string'
             },
             title: {
-              type: 'string',
-              example: 'B.S. Computer Science'
+              type: 'string'
             },
             gpa: {
-              type: 'string',
-              example: '3.0'
+              type: 'string'\
             },
             year: {
-              type: 'integer',
-              example: 1990
+              type: 'integer'
             }
           }
         }
@@ -127,8 +115,7 @@ RSpec.describe 'person endpoints', type: :request do
 
         schema type: 'array', items: 
         {
-          type: 'string',
-          example: 'Over a decade of engineering leadership'
+          type: 'string'
         }
 
         run_test!
@@ -154,8 +141,7 @@ RSpec.describe 'person endpoints', type: :request do
           required: %w(resume),
           properties: {
             resume: {
-              type: 'integer',
-              example: 1
+              type: 'integer'
             }
           }
 
