@@ -14,24 +14,11 @@ RSpec.describe 'api/v1/resume', type: :request do
       description 'Get job details for the resume'
       tags 'Resume'
 
-      response(200, 'queried using a valid resume id') do
+      response 200, 'queried using a valid resume id' do
         produces 'application/json'
         let(:id) { 1 }
 
-        schema type: 'object', 
-          required: %w(companies jobs),
-          properties: {
-            companies: {
-              type: 'array', items: {
-                '$ref' => '#/components/schemas/company'
-              }
-            },
-            jobs: {
-              type: 'array', items: {
-                '$ref' => '#/components/schemas/job'
-              }
-            }
-          }
+        schema '$ref' => '#/components/schemas/resume' 
           
         run_test!
       end
@@ -40,7 +27,33 @@ RSpec.describe 'api/v1/resume', type: :request do
     end
   end
 
+  path '/api/v1/resume/{id}/tags/{tags}/jobs' do
+    parameter name: 'id', in: :path, required: true, type: :integer, description: 'id of the desired resume'
+    parameter name: 'tags', in: :path, required: true, description: 'array of tag ids to fillter by', schema:
+      { 
+        type: 'array',
+        items: {
+          type: 'integer'
+        }
+      }
+    
+      get('jobs') do
+        description 'Get job details for the resume'
+        tags 'Resume'
 
+        response 200, 'queried using a valid resume id and list of tags' do
+          produces 'application/json'
+          let(:id) { 1 }
+          let(:tags) { '29,11' }
+
+          schema '$ref' => '#/components/schemas/resume' 
+
+          run_test!
+        end
+
+        # response 404 should test both invalid resume id and invalid tags
+      end
+  end
   # path '/api/v1/resume/{id}/tags/{tags}/jobs' do
   #   # You'll want to customize the parameter types...
   #   parameter name: 'id', in: :path, type: :string, description: 'id'

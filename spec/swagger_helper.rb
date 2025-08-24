@@ -148,6 +148,22 @@ RSpec.configure do |config|
                 }
               }
             }
+          },
+          resume: {
+            type: 'object', 
+            required: %w(companies jobs),
+            properties: {
+              companies: {
+                type: 'array', items: {
+                  '$ref' => '#/components/schemas/company'
+                }
+              },
+              jobs: {
+                type: 'array', items: {
+                  '$ref' => '#/components/schemas/job'
+                }
+              }
+            }
           }
         }
       },

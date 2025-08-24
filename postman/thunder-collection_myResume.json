@@ -1,0 +1,318 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "myResume",
+    "collectionId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+    "dateExported": "2025-08-24T05:21:50.237Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "person",
+            "containerId": "",
+            "created": "2025-07-30T20:18:34.003Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "00b7b396-fed5-4997-a2f1-9886af399c66",
+            "name": "resume",
+            "containerId": "",
+            "created": "2025-07-30T20:18:34.004Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ab56e795-d3e8-4e2e-b917-76a493512ec2",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "info",
+            "url": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/info",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-07-30T20:18:34.003Z",
+            "modified": "2025-08-22T03:31:40.686Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "1f8c0785-ea03-4a89-ba19-075e5824af4c",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "info (bad)",
+            "url": "{{scheme}}://{{host}}:{{port}}/api/v1/person/bad-uuid/info",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-07-30T20:18:34.004Z",
+            "modified": "2025-07-30T21:29:42.092Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "cc6ba722-939b-4e62-bab5-55582bd61970",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "education",
+            "url": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/education",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-07-30T20:18:34.005Z",
+            "modified": "2025-08-22T15:58:34.907Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "6e286f1b-41a1-40ce-b8cc-6f4f5a1041bb",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "education (bad)",
+            "url": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/education",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-07-30T20:18:34.006Z",
+            "modified": "2025-08-22T17:30:22.829Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "094592d9-38cb-47b0-9f31-62b8778bbc96",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "highlights",
+            "url": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/highlights",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-07-30T20:18:34.007Z",
+            "modified": "2025-08-22T17:29:57.404Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "6b502b72-e585-41f9-8f5b-c5a8ad508a56",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "highlights (bad)",
+            "url": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/highlights",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-07-30T20:18:34.008Z",
+            "modified": "2025-08-22T17:30:12.123Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "f2f11ff6-5be2-459f-8643-2a0672c8068f",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "resume",
+            "url": "{{scheme}}://{{host}}/api/v1/person/{{uuid}}/resume",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2025-07-30T20:18:34.009Z",
+            "modified": "2025-08-22T17:30:45.538Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "json = tc.response.json;",
+                            "expect(json.resume).to.not.be.undefined;",
+                            "tc.setVar(\"resume\", json.resume);",
+                            ""
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "459dae95-6b60-48c0-bb01-65a30577d8c9",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "f70c5597-cc6c-4a7b-8ef5-3185b4a3d67f",
+            "name": "resume (bad)",
+            "url": "{{scheme}}://{{host}}/api/v1/person/bad-uuid/resume",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-07-30T20:18:34.010Z",
+            "modified": "2025-08-22T17:31:15.111Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "d7de534f-ab5f-499a-8fb8-770206a60e08",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "00b7b396-fed5-4997-a2f1-9886af399c66",
+            "name": "jobs",
+            "url": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/jobs",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2025-07-30T20:18:34.011Z",
+            "modified": "2025-08-23T01:17:34.904Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        },
+        {
+            "_id": "8b3042b0-11de-4cee-8fb7-d4e07f741847",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "00b7b396-fed5-4997-a2f1-9886af399c66",
+            "name": "jobs since",
+            "url": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/jobs?since=1/1/2015",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2025-07-30T20:18:34.012Z",
+            "modified": "2025-08-23T16:42:55.860Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ],
+            "params": [
+                {
+                    "name": "since",
+                    "value": "1/1/2015",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "6df51548-0d43-429f-9d26-d7101dca4af4",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "00b7b396-fed5-4997-a2f1-9886af399c66",
+            "name": "tags",
+            "url": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/tags",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2025-07-30T20:18:34.013Z",
+            "modified": "2025-08-24T05:18:10.747Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "json = tc.response.json;",
+                            "",
+                            "function getRandomId(tagsArray) {",
+                            "  const idx = Math.trunc(Math.random()*tagsArray.length)",
+                            "  return tagsArray[idx][\"id\"];",
+                            "}",
+                            "",
+                            "assert.isAbove(json.length, 0);",
+                            "id1 = getRandomId(json);",
+                            "id2 = getRandomId(json);",
+                            "",
+                            "tc.setVar(\"tags\", `${id1}, ${id2}`);",
+                            ""
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "e6e6656c-b279-4c0d-a835-dba0cdb05e05",
+            "colId": "a03aa455-731c-4fbe-8df6-b1338cad5932",
+            "containerId": "00b7b396-fed5-4997-a2f1-9886af399c66",
+            "name": "jobs by tags",
+            "url": "{{scheme}}://{{host}}/api/v1/resume/{{resume}}/tags/{{tags}}/jobs",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2025-07-30T20:18:34.015Z",
+            "modified": "2025-08-24T04:23:41.978Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json, application/xml, text/json, text/x-json, text/javascript, text/xml"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "RestSharp/105.0.1.0"
+                }
+            ]
+        }
+    ],
+    "ref": "5Kh-k6dsl4t3Jts2Udr_Ej1Mklp8TsQUuMtabY3lJh_kQvQdabCo4Svt2vMa8bfb1fiLO_N317VQOGWTA_tSKA"
+}
