@@ -2,7 +2,7 @@ module Api::V1
   class ResumeController < ApplicationController
     before_action :get_resume
 
-    rescue_from Exceptions::ResumeNotFound, Exceptions::JobsNotFound, Exceptions::TagsNotFound do
+    rescue_from Errors::ResumeNotFound, Errors::JobsNotFound, Errors::ProjectsNotFound, Errors::TagsNotFound do
       render body: nil, status: 404
     end
 
@@ -11,10 +11,10 @@ module Api::V1
       if !since.nil?
         since_date = DateTime.strptime since, '%m/%d/%Y'
         jobs = Role.in_resume(@resume).since(since_date)
-        raise Exceptions::JobsNotFound unless jobs.count > 0
+        raise Errors::JobsNotFound unless jobs.count > 0
       else
         jobs = @resume.jobs
-        raise Exceptions::JobsNotFound unless jobs.count > 0
+        raise Errors::JobsNotFound unless jobs.count > 0
       end
 
       result = {
@@ -41,14 +41,14 @@ module Api::V1
 
     def tags
       tags = Tag.in_resume @resume
-      raise Exceptions::TagsNotFound if tags.count == 0
+      raise Errors::TagsNotFound if tags.count == 0
 
       send_response tags
     end
 
     def jobs_by_tags
       projects = Project.in_resume @resume
-      raise Exceptions::ProjectsNotFound unless projects.count > 0
+      raise Errors::ProjectsNotFound unless projects.count > 0
 
       tags = params[:tags].split(',').map { |x| x.to_i }
       filtered_projects = []
@@ -93,7 +93,7 @@ module Api::V1
       end
 
       if result[:jobs].length == 0
-        raise Exceptions::JobsNotFound
+        raise Errors::JobsNotFound
       end
 
       #remove the unneeded role.id now
@@ -105,8 +105,8 @@ module Api::V1
     private
 
     def get_resume
-      @resume = Resume.find params[:id]
-      raise Exceptions::ResumeNotFound if @resume.nil?
+      @resume = Resume.find_by_id params[:id]
+      raise Errors::ResumeNotFound if @resume.nil?
     end
   end
 end

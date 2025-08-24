@@ -8,6 +8,9 @@ gem 'puma', '~> 6.4', '>= 6.4.2'
 gem 'jbuilder', '~> 2.7'
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 gem 'graphql'
+gem 'rswag-api'
+gem 'rswag-ui'
+gem 'ostruct'
 
 group :development do
   gem 'bake', '~> 0.24.0'
@@ -20,5 +23,6 @@ end
 group :test do
   gem 'rspec', '~> 3.13', '>= 3.13.1'
   gem 'rspec-rails', '~> 8.0', '>= 8.0.1'
+  gem 'rswag-specs'
   gem 'rack-test'
 end
