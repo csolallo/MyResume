@@ -22,131 +22,13 @@ RSpec.describe 'api/v1/resume', type: :request do
           required: %w(companies jobs),
           properties: {
             companies: {
-              type: 'array', items:
-              {
-                type: 'object', 
-                required: %w(id name address1 address2 city state zip),
-                properties: {
-                  id: {
-                    type: 'integer'
-                  },
-                  name: {
-                    type: 'string'
-                  },
-                  address1: {
-                    type: 'string',
-                    nullable: true
-                  },
-                  address2: {
-                    type: 'string',
-                    nullable: true
-                  },
-                  city: {
-                    type: 'string',
-                    nullable: true
-                  },
-                  state: {
-                    type: 'string',
-                    nullable: true
-                  },
-                  zip: {
-                    type: 'string',
-                    nullable: true
-                  }
-                }
+              type: 'array', items: {
+                '$ref' => '#/components/schemas/company'
               }
             },
             jobs: {
-              type: 'array', items:
-              {
-                type: 'object',
-                required: %w(title start_date end_date company_id projects),
-                properties: {
-                  title: {
-                    type: 'string'
-                  },
-                  start_date: {
-                    type: 'string',
-                    format: 'date-time'
-                  },
-                  end_date: {
-                    type: 'string',
-                    format: 'date-time',
-                    nullable: true
-                  },
-                  company_id: {
-                    type: 'integer'
-                  },
-                  projects: {
-                    type: 'array', items: 
-                    {
-                      type: 'object',
-                      required: %w(name description accomplishments tags),
-                      properties: {
-                        name: {
-                          type: 'string'
-                        },
-                        description: {
-                          type: 'string'
-                        },
-                        accomplishments: {
-                          type: 'array', items: 
-                          {
-                            type: 'object',
-                            required: %w(description),
-                            properties: {
-                              description: {
-                                type: 'string'
-                              }
-                            }
-                          }
-                        },
-                        apps: {
-                          type: 'array', items: 
-                          {
-                            type: 'object',
-                            required: %w(name platform url comment image_url),
-                            properties: {
-                              name: {
-                                type: 'string'
-                              },
-                              platform: {
-                                type: 'string'
-                              },
-                              url: {
-                                type: 'string',
-                                nullable: true
-                              },
-                              commment: {
-                                type: 'string',
-                                nullable: true
-                              },
-                              image_url: {
-                                type: 'string',
-                                nullable: true
-                              }
-                            }
-                          }
-                        },
-                        tags: {
-                          type: 'array', items: 
-                          {
-                            type: 'object',
-                            required: %w(id name),
-                            properties: {
-                              id: {
-                                type: 'integer'
-                              },
-                              name: {
-                                type: 'string'
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+              type: 'array', items: {
+                '$ref' => '#/components/schemas/job'
               }
             }
           }

@@ -165,118 +165,126 @@ paths:
                   companies:
                     type: array
                     items:
-                      type: object
-                      required:
-                      - id
-                      - name
-                      - address1
-                      - address2
-                      - city
-                      - state
-                      - zip
-                      properties:
-                        id:
-                          type: integer
-                        name:
-                          type: string
-                        address1:
-                          type: string
-                          nullable: true
-                        address2:
-                          type: string
-                          nullable: true
-                        city:
-                          type: string
-                          nullable: true
-                        state:
-                          type: string
-                          nullable: true
-                        zip:
-                          type: string
-                          nullable: true
+                      "$ref": "#/components/schemas/company"
                   jobs:
                     type: array
                     items:
-                      type: object
-                      required:
-                      - title
-                      - start_date
-                      - end_date
-                      - company_id
-                      - projects
-                      properties:
-                        title:
-                          type: string
-                        start_date:
-                          type: string
-                          format: date-time
-                        end_date:
-                          type: string
-                          format: date-time
-                          nullable: true
-                        company_id:
-                          type: integer
-                        projects:
-                          type: array
-                          items:
-                            type: object
-                            required:
-                            - name
-                            - description
-                            - accomplishments
-                            - tags
-                            properties:
-                              name:
-                                type: string
-                              description:
-                                type: string
-                              accomplishments:
-                                type: array
-                                items:
-                                  type: object
-                                  required:
-                                  - description
-                                  properties:
-                                    description:
-                                      type: string
-                              apps:
-                                type: array
-                                items:
-                                  type: object
-                                  required:
-                                  - name
-                                  - platform
-                                  - url
-                                  - comment
-                                  - image_url
-                                  properties:
-                                    name:
-                                      type: string
-                                    platform:
-                                      type: string
-                                    url:
-                                      type: string
-                                      nullable: true
-                                    commment:
-                                      type: string
-                                      nullable: true
-                                    image_url:
-                                      type: string
-                                      nullable: true
-                              tags:
-                                type: array
-                                items:
-                                  type: object
-                                  required:
-                                  - id
-                                  - name
-                                  properties:
-                                    id:
-                                      type: integer
-                                    name:
-                                      type: string
+                      "$ref": "#/components/schemas/job"
         '404':
           description: queried using an invalid resume id
+components:
+  schemas:
+    tag:
+      type: object
+      required:
+      - id
+      - name
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+    company:
+      type: object
+      required:
+      - id
+      - name
+      - address1
+      - address2
+      - city
+      - state
+      - zip
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        address1:
+          type: string
+          nullable: true
+        address2:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        state:
+          type: string
+          nullable: true
+        zip:
+          type: string
+          nullable: true
+    job:
+      type: object
+      required:
+      - title
+      - start_date
+      - end_date
+      - company_id
+      - projects
+      properties:
+        title:
+          type: string
+        start_date:
+          type: string
+          format: date-time
+        end_date:
+          type: string
+          format: date-time
+          nullable: true
+        company_id:
+          type: integer
+        projects:
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - description
+            - accomplishments
+            - tags
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              accomplishments:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - description
+                  properties:
+                    description:
+                      type: string
+              apps:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - name
+                  - platform
+                  - url
+                  - comment
+                  - image_url
+                  properties:
+                    name:
+                      type: string
+                    platform:
+                      type: string
+                    url:
+                      type: string
+                      nullable: true
+                    commment:
+                      type: string
+                      nullable: true
+                    image_url:
+                      type: string
+                      nullable: true
+              tags:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/tag"
 servers:
 - url: https://resume.sola-llon.ch
   description: Production environment
