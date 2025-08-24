@@ -153,7 +153,7 @@ paths:
       - Resume
       responses:
         '200':
-          description: successful
+          description: queried using a valid resume id
           content:
             application/json:
               schema:
@@ -275,6 +275,8 @@ paths:
                                       type: integer
                                     name:
                                       type: string
+        '404':
+          description: queried using an invalid resume id
 servers:
 - url: https://resume.sola-llon.ch
   description: Production environment

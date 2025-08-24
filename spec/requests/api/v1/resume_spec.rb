@@ -1,7 +1,11 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/resume', type: :request do
-  
+    not_found_proc = Proc.new {
+      let(:id) { 1337 }
+      run_test!
+  }
+
   path '/api/v1/resume/{id}/jobs' do
     parameter name: 'id', in: :path, required: true, type: :integer, description: 'id of the desired resume'
     parameter name: 'since', in: :query, type: :string, required: false, description: 'only list jobs on or after this date'
@@ -10,7 +14,7 @@ RSpec.describe 'api/v1/resume', type: :request do
       description 'Get job details for the resume'
       tags 'Resume'
 
-      response(200, 'successful') do
+      response(200, 'queried using a valid resume id') do
         produces 'application/json'
         let(:id) { 1 }
 
@@ -149,6 +153,8 @@ RSpec.describe 'api/v1/resume', type: :request do
           
         run_test!
       end
+
+      response 404, 'queried using an invalid resume id', &not_found_proc
     end
   end
 
