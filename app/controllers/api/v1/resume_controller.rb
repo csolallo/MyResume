@@ -2,7 +2,7 @@ module Api::V1
   class ResumeController < ApplicationController
     before_action :get_resume
 
-    rescue_from Errors::ResumeNotFound, Errors::JobsNotFound, Errors::TagsNotFound do
+    rescue_from Errors::ResumeNotFound, Errors::JobsNotFound, Errors::ProjectsNotFound, Errors::TagsNotFound do
       render body: nil, status: 404
     end
 
@@ -105,7 +105,7 @@ module Api::V1
     private
 
     def get_resume
-      @resume = Resume.find params[:id]
+      @resume = Resume.find_by_id params[:id]
       raise Errors::ResumeNotFound if @resume.nil?
     end
   end

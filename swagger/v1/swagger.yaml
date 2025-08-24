@@ -160,6 +160,30 @@ paths:
                 "$ref": "#/components/schemas/resume"
         '404':
           description: queried using an invalid resume id
+  "/api/v1/resume/{id}/tags":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      description: id of the desired resume
+      schema:
+        type: integer
+    get:
+      summary: tags
+      description: Get all tags - across all jobs - for the resume
+      tags:
+      - Resume
+      responses:
+        '200':
+          description: queried using a valid resume id
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/tag"
+        '404':
+          description: queried using an invalid resume id
   "/api/v1/resume/{id}/tags/{tags}/jobs":
     parameters:
     - name: id
@@ -188,6 +212,8 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/resume"
+        '404':
+          description: queried using a valid resume id but invalid tags
 components:
   schemas:
     tag:
