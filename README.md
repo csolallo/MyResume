@@ -73,6 +73,12 @@ To actually generate the swagger yaml file, you use the rake task:
 
 ` RAILS_ENV=test rake rswag`
 
+Helpful docs/tutorials:  
+* [Swagger Doca](https://swagger.io/docs/specification/v3_0/about/)
+* [Doctave - Good tutorial](https://www.doctave.com/blog/generate-openapi-swagger-spec-from-ruby-on-rails#generating-the-openapi-spec)
+* [Speakeasy - Good tutorial](https://www.speakeasy.com/openapi/frameworks/rails)
+
+
 ##### Web Server #####
 
 It may be that the bin folder is missing. This can be true after a clone. To recreate, use the following:  
