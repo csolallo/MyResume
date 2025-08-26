@@ -101,5 +101,5 @@ In the app
 
 [git push helper](https://help.github.com/articles/pushing-to-a-remote/)
 
-`git push heroku rails-5.0:master`
+`git push heroku main`
 
