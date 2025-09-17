@@ -4,68 +4,77 @@ def get_tag(name)
     tag = Tag.create(
       name: name
     )
+    return tag
   end
-  return tag
 end
 
-obj_c = get_tag 'objective-c'
-swift = get_tag 'Swift'
-typescript = get_tag 'TypeScript'
-redux = get_tag 'Redux'
-rxswift = get_tag 'RxSwift'
-aspnet = get_tag 'ASP.NET' 
-mdm = get_tag 'MDM'
 android = get_tag 'android'
-ios = get_tag 'iOS'
-reactnative = get_tag 'React-Native'
-php = get_tag 'PHP'
-codeigniter = get_tag 'CodeIgniter'
-js = get_tag 'JavaScript'
-jquery = get_tag 'JQuery'
+aspnet = get_tag 'ASP.NET' 
+aws = get_tag 'AWS'
 backbone = get_tag 'backbone.js'
-require = get_tag 'require.js'
+bindings = get_tag 'Bindings'
 bootstrap = get_tag 'bootstrap'
-html5 = get_tag 'HTML5'
-css = get_tag 'CSS'
-phonegap = get_tag 'Cordova/PhoneGap'
-jenkins = get_tag 'Jenkins'
-jira = get_tag 'Jira'
-gitlab = get_tag 'GitLab'
-virtualbox = get_tag 'VirtualBox'
-linux = get_tag 'Debian'
 beacon = get_tag 'iBeacon'
-instruments = get_tag 'Instruments'
-ci = get_tag 'CoreImage'
+ble = get_tag 'Bluetooth LE'
+bq = get_tag 'Big Query'
+ca = get_tag 'CoreAnimation'
 cd = get_tag 'CoreData'
 cg = get_tag 'CoreGraphics'
-ca = get_tag 'CoreAnimation'
-bindings = get_tag 'Bindings'
-swizzle = get_tag 'swizzling'
-ruby = get_tag 'ruby'
-rails = get_tag 'Rails'
-postgres = get_tag 'Postgresql'
-heroku = get_tag 'Heroku'
-redis = get_tag 'Redis'
-java = get_tag 'java'
-spring = get_tag 'Spring 2'
-struts = get_tag 'Struts 2'
-informix = get_tag 'Informix'
-svn = get_tag 'Subversion'
-tomcat = get_tag 'Tomcat'
-lucene = get_tag 'Apache Lucene'
-jsp = get_tag 'JSP'
-jaxp = get_tag 'JAXP'
-xml = get_tag 'XML'
-xsl = get_tag 'XSL/XSLT'
+ci = get_tag 'CoreImage'
+codeigniter = get_tag 'CodeIgniter'
+css = get_tag 'CSS'
+dc = get_tag 'Docker Compose'
+delphi = get_tag 'Delphi 5/6'
+docker = get_tag 'Docker'
+dotnet = get_tag '.NET'
 flex = get_tag 'Adobe Flex'
+gcp = get_tag 'Google Cloud Platform'
+gitlab = get_tag 'GitLab'
+graphql = get_tag 'GraphQL'
+heroku = get_tag 'Heroku'
+html5 = get_tag 'HTML5'
+ilog = get_tag 'ILog Rules Engine'
+informix = get_tag 'Informix'
+instruments = get_tag 'Instruments'
+ios = get_tag 'iOS'
+java = get_tag 'java'
+jaxp = get_tag 'JAXP'
+jenkins = get_tag 'Jenkins'
+jira = get_tag 'Jira'
+jquery = get_tag 'JQuery'
+js = get_tag 'JavaScript'
+jsp = get_tag 'JSP'
+linux = get_tag 'Debian'
+lucene = get_tag 'Apache Lucene'
+mgmt = get_tag 'Management'
+mdm = get_tag 'MDM'
+phonegap = get_tag 'Cordova/PhoneGap'
+php = get_tag 'PHP'
+postgres = get_tag 'Postgresql'
+python = get_tag 'Python'
+obj_c = get_tag 'objective-c'
+rails = get_tag 'Rails'
+react =  get_tag 'React'
+reactnative = get_tag 'React-Native'
+redis = get_tag 'Redis'
+redux = get_tag 'Redux'
+require = get_tag 'require.js'
+ruby = get_tag 'Ruby'
+rxswift = get_tag 'RxSwift'
+spring = get_tag 'Spring 2'
+springboot = get_tag 'Spring Boot'
+struts = get_tag 'Struts 2'
+svn = get_tag 'Subversion'
+swift = get_tag 'Swift'
+swizzle = get_tag 'swizzling'
+tomcat = get_tag 'Tomcat'
+typescript = get_tag 'TypeScript'
+virtualbox = get_tag 'VirtualBox'
 win32 = get_tag 'Win32'
 wse3 = get_tag 'WSE 3'
-dotnet = get_tag '.NET'
-aspnet = get_tag 'ASP.NET'
-ilog = get_tag 'ILog Rules Engine'
+xml = get_tag 'XML'
 xquery = get_tag 'XQuery'
-delphi = get_tag 'Delphi 5/6'
-
+xsl = get_tag 'XSL/XSLT'
 
 co = Company.find_by_name('Providence Health & Services')
 
@@ -118,6 +127,9 @@ proj3 = co.roles[0].projects.find_by_name('iShop 3 Enterprise Web Service')
 [java, jaxp, xml, xsl, informix, flex].each { |tag| proj3.tags << tag }
 proj3.save!
 
+proj4 = co.roles[0].projects.find_by_name('Tire data web crawler')
+[ruby, linux].each { |tag| proj4.tags << tag }
+
 co = Company.find_by_name('ISingleton, Inc.')
 
 proj1 = co.roles.find_by_title('Software Developer/Architect').projects.find_by_name('Multimedia content management system')
@@ -132,7 +144,6 @@ proj3 = co.roles.find_by_title('Technical Lead/Architect').projects.find_by_name
 [dotnet, win32, delphi, aspnet, xsl].each { |tag| proj3.tags << tag }
 proj3.save!
 
-
 co = Company.find_by_name('Requested')
 role = co.roles.find_by_title('Software Engineer/Technologist')
 
@@ -145,7 +156,6 @@ proj = role.projects.find_by_name('Merchant app')
 proj = role.projects.find_by_name('Consumer app')
 [swift, obj_c, phonegap, js].each { |tag| proj.tags << tag }
 
-
 co = Company.find_by_name('Providence Health & Services')
 role = co.roles.find_by_title('Sr. Software Engineer')
 
@@ -156,10 +166,21 @@ co = Company.find_by_name('Best Buy')
 role = co.roles.find_by_title('Sr. Software Engineer')
 
 proj = role.projects.find_by_name('Insignia iOS app')
-[swift, obj_c].each { |tag| proj.tags << tag }
+[swift, obj_c, ble].each { |tag| proj.tags << tag }
 
 proj = role.projects.find_by_name('Home iOS app')
-[swift, obj_c].each { |tag| proj.tags << tag }
+[swift, obj_c, graphql, ruby].each { |tag| proj.tags << tag }
 
-proj = role.projects.find_by_name('GreatCall Link app')
+proj = role.projects.find_by_name('Lively Link app')
 [typescript, reactnative, js, android, ios].each { |tag| proj.tags << tag }
+
+proj = role.projects.find_by_name('Lively Health and Safety app')
+[swift, obj_c, ios].each { |tag| proj.tags << tag }
+
+role = co.roles.find_by_title('Manager, Software Engineering')
+proj = role.projects.find_by_name('Humana Health POC app')
+[android, ios, mgmt].each { |tag| proj.tags << tag }
+
+role = co.roles.find_by_title('Sr. Manager, Software Engineering')
+proj = role.projects.find_by_name('MyAds Platform')
+[mgmt, aws, python, bq, docker, dc, gcp].each { |tag| proj.tags << tag }
