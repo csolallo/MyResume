@@ -35,6 +35,10 @@ if Company.find_by_name('Best Buy').nil?
   require_relative 'bestbuy_seeds'
 end
 
+if Company.find_by_name('Self').nil?
+  require_relative 'sabbatical_seeds'
+end
+
 if Tag.count(:all) == 0
   require_relative 'tag_seeds'
 end
