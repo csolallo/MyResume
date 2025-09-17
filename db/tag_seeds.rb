@@ -12,9 +12,10 @@ android = get_tag 'android'
 aspnet = get_tag 'ASP.NET' 
 aws = get_tag 'AWS'
 backbone = get_tag 'backbone.js'
-bindings = get_tag 'Bindings'
-bootstrap = get_tag 'bootstrap'
+bash = get_tag 'bash'
 beacon = get_tag 'iBeacon'
+bootstrap = get_tag 'bootstrap'
+bindings = get_tag 'Bindings'
 ble = get_tag 'Bluetooth LE'
 bq = get_tag 'Big Query'
 ca = get_tag 'CoreAnimation'
@@ -29,6 +30,7 @@ docker = get_tag 'Docker'
 dotnet = get_tag '.NET'
 flex = get_tag 'Adobe Flex'
 gcp = get_tag 'Google Cloud Platform'
+gha = get_tag 'Github Actions'
 gitlab = get_tag 'GitLab'
 graphql = get_tag 'GraphQL'
 heroku = get_tag 'Heroku'
@@ -39,6 +41,7 @@ instruments = get_tag 'Instruments'
 ios = get_tag 'iOS'
 java = get_tag 'java'
 jaxp = get_tag 'JAXP'
+jekyll = get_tag 'Jekyll'
 jenkins = get_tag 'Jenkins'
 jira = get_tag 'Jira'
 jquery = get_tag 'JQuery'
@@ -65,6 +68,7 @@ spring = get_tag 'Spring 2'
 springboot = get_tag 'Spring Boot'
 struts = get_tag 'Struts 2'
 svn = get_tag 'Subversion'
+swagger = get_tag 'OpenAPI/Swagger'
 swift = get_tag 'Swift'
 swizzle = get_tag 'swizzling'
 tomcat = get_tag 'Tomcat'
@@ -183,4 +187,19 @@ proj = role.projects.find_by_name('Humana Health POC app')
 
 role = co.roles.find_by_title('Sr. Manager, Software Engineering')
 proj = role.projects.find_by_name('MyAds Platform')
-[mgmt, aws, python, bq, docker, dc, gcp].each { |tag| proj.tags << tag }
+[mgmt, aws, bash, python, bq, docker, dc, gcp].each { |tag| proj.tags << tag }
+
+co = Company.find_by_name('Self')
+
+proj = co.roles[0].projects.find_by_name('MyResume api')
+[ruby, rails, postgres, graphql, swagger].each { |tag| proj.tags << tag }
+
+proj = co.roles[0].projects.find_by_name('Groceries')
+[ruby, gha, android, bash].each { |tag| proj.tags << tag }
+
+proj = co.roles[0].projects.find_by_name('Groceries')
+[ruby, gha, android, bash].each { |tag| proj.tags << tag }
+
+proj = co.roles[0].projects.find_by_name('Water taxi microsite')
+[ruby, jekyll, heroku, gha].each { |tag| proj.tags << tag }
+
