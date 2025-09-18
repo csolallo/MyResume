@@ -12,7 +12,7 @@ role = co.roles.create(
 proj = role.projects.create(
   name: 'MyResume api',
   description: <<-HEREDOC
-  Rails application providing RESTful and GrapQL endpoints to power a resume front-end. I built this app years ago. During
+  Rails application providing RESTful and GraphQL endpoints to power a resume front-end. I built this app years ago. During
   the sabbatical, I have updated gems and added swagger documentation.
   HEREDOC
 )
@@ -36,7 +36,7 @@ proj = role.projects.create(
   name: 'Groceries',
   description: <<-HEREDOC
   I built this system to automate the addition of (grocery) items into a Google Keep list. The system 
-  leverages several android tools (MacroDroid, Tasker, Termux) and a Ruby script that runs on-device. The script 
+  leverages several android tools (MacroDroid, Tasker, Termux) and uses a Ruby script that runs on-device. The script 
   uses the official Google Keep API to manage the list.
   HEREDOC
 )
@@ -52,9 +52,9 @@ proj.apps.create(
 proj = role.projects.create(
   name: 'Water taxi microsite',
   description: <<-HEREDOC
-  A microsite is a combination web crawler and minimal static site. The purppose is to crawl an external
+  A microsite is a combination web crawler and minimal static site. The purpose is to crawl an external
   website and expose its critical data in a minimal static site heavily optimized for a small screen. In this
-  implemenation, King County water taxi schedules are presented only for the dock nearest the device's 
+  implementation, King County water taxi schedules are presented only for the dock nearest the device's 
   location.
   HEREDOC
 )
