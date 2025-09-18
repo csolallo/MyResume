@@ -53,6 +53,11 @@ or
 bundle exec rails db:environment:set RAILS_ENV=test
 bundle exec rails db:schema:load
 bundle exec rails db:seed
+
+For production on Heroku, use the cli:
+
+heroku run rails db:schema:load DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+heroku run rails db:seed DISABLE_DATABASE_ENVIRONMENT_CHECK=1
 ```
 
 A handy [Cheat sheet](https://rspec.info/features/3-13/rspec-expectations/built-in-matchers/) of all the built-in matchers

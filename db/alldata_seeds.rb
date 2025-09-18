@@ -63,5 +63,5 @@ project.accomplishments.create(
 
 project = role.projects.create(
   name: 'Tire data web crawler',
-  description: 'Web crawler mostly written in ruby that gathered tire specifications from the websites of specifc tire manufacturers'
+  description: 'Web crawler mostly written in ruby that gathered tire specifications from the websites of specific tire manufacturers'
 )
