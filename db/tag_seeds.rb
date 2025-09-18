@@ -47,7 +47,7 @@ jira = get_tag 'Jira'
 jquery = get_tag 'JQuery'
 js = get_tag 'JavaScript'
 jsp = get_tag 'JSP'
-linux = get_tag 'Debian'
+linux = get_tag 'Linux'
 lucene = get_tag 'Apache Lucene'
 mgmt = get_tag 'Management'
 mdm = get_tag 'MDM'
@@ -114,7 +114,7 @@ proj3.save!
 co = Company.find_by_name('Yorder')
 
 proj1 = co.roles[0].projects[0]
-[obj_c, instruments, php, codeigniter, ruby].each { |tag| proj1.tags << tag}
+[obj_c, instruments, php, codeigniter].each { |tag| proj1.tags << tag}
 proj1.save!
 
 co = Company.find_by_name('ALLDATA/Autozone')
@@ -152,7 +152,7 @@ co = Company.find_by_name('Requested')
 role = co.roles.find_by_title('Software Engineer/Technologist')
 
 proj = role.projects.find_by_name('Support and on-boarding web application')
-[js, ruby, rails, postgres, heroku, redis].each { |tag| proj.tags << tag }
+[js,html5, css, bootstrap, ruby, rails, postgres, heroku, redis].each { |tag| proj.tags << tag }
 
 proj = role.projects.find_by_name('Merchant app')
 [swift, obj_c, mdm].each { |tag| proj.tags << tag }
@@ -173,7 +173,7 @@ proj = role.projects.find_by_name('Insignia iOS app')
 [swift, obj_c, ble].each { |tag| proj.tags << tag }
 
 proj = role.projects.find_by_name('Home iOS app')
-[swift, obj_c, graphql, ruby].each { |tag| proj.tags << tag }
+[ios, swift, obj_c, graphql, ruby, reactnative, typescript].each { |tag| proj.tags << tag }
 
 proj = role.projects.find_by_name('Lively Link app')
 [typescript, reactnative, js, android, ios].each { |tag| proj.tags << tag }
@@ -192,14 +192,11 @@ proj = role.projects.find_by_name('MyAds Platform')
 co = Company.find_by_name('Self')
 
 proj = co.roles[0].projects.find_by_name('MyResume api')
-[ruby, rails, postgres, graphql, swagger].each { |tag| proj.tags << tag }
-
-proj = co.roles[0].projects.find_by_name('Groceries')
-[ruby, gha, android, bash].each { |tag| proj.tags << tag }
+[ruby, rails, postgres, graphql, heroku, swagger].each { |tag| proj.tags << tag }
 
 proj = co.roles[0].projects.find_by_name('Groceries')
 [ruby, gha, android, bash].each { |tag| proj.tags << tag }
 
 proj = co.roles[0].projects.find_by_name('Water taxi microsite')
-[ruby, jekyll, heroku, gha].each { |tag| proj.tags << tag }
+[ruby, jekyll, heroku].each { |tag| proj.tags << tag }
 
