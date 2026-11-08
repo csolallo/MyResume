@@ -14,8 +14,8 @@ end
 
 company.roles.create(
   title: 'Sr. Software Engineer',
-  start_date: '2/1/2016'.to_date,
-  end_date: '6/1/2017'.to_date
+  start_date: '8/2/2016'.to_date,
+  end_date: '1/6/2017'.to_date
 )
 
 role = company.roles.find_by_title('Sr. Software Engineer')

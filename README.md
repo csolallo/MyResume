@@ -90,6 +90,11 @@ I use [the debug gem](https://github.com/ruby/debug?tab=readme-ov-file).
 
 I've added  __require "debug/open_nonstop"__ to the development config file so in VSCode if the "VSCode rdbg Ruby Debugger" is installed you can attach and debug in the IDE.
 
+Pick the config from the dropdown and press the green play button:
+* rdbg - socket, from your launch.json, attaches over the UNIX socket that open_nonstop opens. This is the one that matches your README setup.
+* rdbg - tcp attaches to port 1234. It only works if you started the process with a TCP port, for example by setting RUBY_DEBUG_PORT=1234 before launching. open_nonstop uses a socket by default, so tcp won't connect unless you set that.
+
+
 To debug the api using Thunder Client, it is not necessary to use a self-signed local host cert. So launch the web server as:  
 `bundle exec rails s -b 0.0.0.0 -p 3001` 
 

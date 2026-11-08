@@ -9,8 +9,8 @@ company = Company.find_by_name(company_name)
 
 company.roles.create(
   title: 'Software Developer/Architect',
-  start_date: '3/1/2007'.to_date,
-  end_date: '5/1/2007'.to_date
+  start_date: '1/3/2005'.to_date,
+  end_date: '1/5/2007'.to_date
 )
 
 role = company.roles.find_by_title('Software Developer/Architect')
@@ -36,8 +36,8 @@ project.accomplishments.create(
 
 company.roles.create(
   title: 'Lead Developer',
-  start_date: '7/1/2005'.to_date,
-  end_date: '12/1/2006'.to_date
+  start_date: '1/2/2004'.to_date,
+  end_date: '1/3/2005'.to_date
 )
 
 role = company.roles.find_by_title('Lead Developer')
@@ -71,8 +71,8 @@ project.accomplishments.create(
 
 company.roles.create(
   title: 'Technical Lead/Architect',
-  start_date: '9/1/2001'.to_date,
-  end_date: '1/1/2007'.to_date
+  start_date: '1/9/2001'.to_date,
+  end_date: '1/2/2004'.to_date
 )
 
 role = company.roles.find_by_title('Technical Lead/Architect')

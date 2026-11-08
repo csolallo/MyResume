@@ -12,7 +12,7 @@ company = Company.find_by_name(company_name)
 
 company.roles.create(
   title: 'Sr. Developer/Product Architect',
-  start_date: '9/1/2007'.to_date,
+  start_date: '1/6/2007'.to_date,
   end_date: '1/1/2009'.to_date
 )
 

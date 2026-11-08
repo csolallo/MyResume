@@ -10,8 +10,8 @@ Company.create(
 company = Company.find_by_name(company_name)
 company.roles.create(
     title: 'Software Engineer/Technologist',
-    start_date: '4/1/2015'.to_date,
-    end_date: '2/8/2016'.to_date
+    start_date: '1/4/2015'.to_date,
+    end_date: '8/2/2016'.to_date
 )
 
 role = company.roles.find_by_title('Software Engineer/Technologist')

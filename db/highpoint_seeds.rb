@@ -11,8 +11,8 @@ Company.create(
 company = Company.find_by_name(company_name)
 company.roles.create(
   title: 'Director of Mobile Technologies',
-  start_date: '3/1/2013'.to_date,
-  end_date: '8/1/2014'.to_date
+  start_date: '1/3/2013'.to_date,
+  end_date: '1/8/2014'.to_date
 )
 
 role = company.roles.find_by_title('Director of Mobile Technologies')

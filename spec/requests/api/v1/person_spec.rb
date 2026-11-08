@@ -1,14 +1,12 @@
 require 'swagger_helper'
 
-
 # what even is run_tests!         
 # * call our api and validate response against schema
 # * generates documentation
 
 RSpec.describe 'person endpoints', type: :request do
 
-  # uuid in test environment. Update if we reseed test
-  Me = '6fd2bf66-24c8-4aa1-9ae2-cb81e9a7f483'
+  Me = Person.find_by_name('Carlos Sola-Llonch').uuid
 
   not_found_proc = Proc.new {
     let(:uuid) { 'bad-person-uuid' }

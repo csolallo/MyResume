@@ -9,7 +9,7 @@ company = Company.find_by_name(company_name)
 
 company.roles.create(
   title: 'Founder/Developer',
-  start_date: '9/1/2010'.to_date,
+  start_date: '1/9/2010'.to_date,
   end_date: '1/1/2012'.to_date
 )
 
