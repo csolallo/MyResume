@@ -77,14 +77,14 @@ proj.accomplishments.create(
 )
 
 proj.apps.create(
-  name: 'GreatCall Link',
+  name: 'Lively Link',
   platform: 'iOS',
-  url: 'https://apps.apple.com/us/app/greatcall-link/id584004617',
+  url: 'https://apps.apple.com/us/app/lively-link/id584004617',
   image_url: '',
 )
 
 proj.apps.create(
-  name: 'GreatCall Link',
+  name: 'Lively Link',
   platform: 'android',
   url: 'https://play.google.com/store/apps/details?id=com.greatcall.link&hl=en_US',
   image_url: '',
@@ -103,15 +103,79 @@ role.accomplishments.create(
 )
 
 role.accomplishments.create(
-  description: 'Manage a team of two web developers and seven app developers'
+  description: 'Established a web development competency within Best Buy Health'
 )
 
 role.accomplishments.create(
-  description: 'Responsible for staff planning and projections'
+  description: 'Managed a team of two web developers and seven app developers'
 )
 
 role.accomplishments.create(
-  description: 'Facilitate collaboration between remote teams'
+  description: 'Assisted with staff planning and projections'
+)
+
+role.accomplishments.create(
+  description: 'Facilitated collaboration between remote teams'
+)
+
+proj = role.projects.create(
+  name: 'Humana Health POC app',
+  description: 'App to facilitate remote telemetry readings using BLE devices'
+)
+
+proj.accomplishments.create(
+  description: 'Delivered Humana iOS and android apps with integrations for numerous BLE devices'
+)
+
+proj.apps.create(
+  name: 'Humana POC app',
+  platform: 'iOS',
+  url: '',
+  image_url: '',
+  comment: 'The pilot program ended and app is no longer available.'
+)
+
+proj.apps.create(
+  name: 'Humana POC app',
+  platform: 'android',
+  url: '',
+  image_url: '',
+  comment: 'The pilot program ended and app is no longer available.'
+)
+
+# as senior manager
+
+role = company.roles.find_by_title('Sr. Manager, Software Engineering')
+
+proj = role.projects.create(
+  name: 'MyAds Platform',
+  description: <<HEREDOC
+I managed up to sixteen engineers and QA spread across two teams, one full-stack and one
+data engineering. The teams built and supported the MyAds advertising reporting platform and
+were part of the larger Marketing and Advertising organization at Best Buy.
+HEREDOC
+)
+
+proj.accomplishments.create(
+  description: 'Led successful platform modernization effort for the MyAds advertising reporting website'
+)
+proj.accomplishments.create(
+  description: 'Led the public rollout of MyAds'
+)
+proj.accomplishments.create(
+  description: 'Ensured MyAds adhered to Best Buy security policies'
+)
+proj.accomplishments.create(
+  description: 'Oversaw the expansion of the MyAds development team to double its original size'
+)
+proj.accomplishments.create(
+  description: 'Led the data engineering team on major process improvement initiatives'
+)
+proj.accomplishments.create(
+  description: 'Integrated offshore resources into the data engineering team'
+)
+proj.accomplishments.create(
+  description: 'Core member of the team building the internal CLI (command line interface) for MyAds'
 )
 
 # as full-stack development manager

@@ -35,6 +35,10 @@ if Company.find_by_name('Best Buy').nil?
   require_relative 'bestbuy_seeds'
 end
 
+if Company.find_by_name('Self').nil?
+  require_relative 'sabbatical_seeds'
+end
+
 if Company.find_by_name('Populus').nil?
   require_relative 'populus_seeds'
 end
