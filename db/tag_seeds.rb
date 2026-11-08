@@ -208,4 +208,4 @@ co = Company.find_by_name('Populus')
 
 role = co.roles.find_by_title('Software Developer, Full-stack')
 proj = role.projects.find_by_name('MyAds')
-[java, react, node, typescript, spring_2_3, springboot, docker, docker_compose, postgres].each { |tag| proj.tags << tag }
+[java, react, node, typescript, spring, springboot, docker, dc, postgres].each { |tag| proj.tags << tag }

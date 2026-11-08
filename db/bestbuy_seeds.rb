@@ -60,7 +60,7 @@ proj.apps.create(
 )
 
 proj = role.projects.create(
-  name: 'GreatCall Link app',
+  name: 'Lively Link app',
   description: 'Link is part of the Best Buy health initiative'
 )
 
@@ -83,20 +83,36 @@ proj.apps.create(
   image_url: '',
 )
 
-proj.apps.create(
-  name: 'Lively Link',
-  platform: 'android',
-  url: 'https://play.google.com/store/apps/details?id=com.greatcall.link&hl=en_US',
-  image_url: '',
+proj = role.projects.create(
+  name: 'Lively Health and Safety app',
+  description: 'Lively app and backing service assist people with living independently longer'
 )
 
-# as mobile development manager
+# Lively watch app and accomplishments
+
+proj.accomplishments.create(
+  description: 'Worked with Product on initial watch app feature set'
+)
+
+proj.accomplishments.create(
+  description: 'Integrated pre-release version fall detection API. Reported findings to Apple'
+)
+
+proj.apps.create(
+  name: 'Lively Health and Safety app',
+  platform: 'iOS',
+  url: 'https://apps.apple.com/us/app/lively-link/id584004617',
+  image_url: '',
+  comment: 'Apple watch app was removed from after several iterations'
+)
 
 role = company.roles.create(
-  title: 'Manager, Software Development',
+  title: 'Manager, Software Engineering',
   start_date: '1/11/2019'.to_date,
   end_date: '1/8/2021'.to_date
 )
+
+# as engineering manager
 
 role.accomplishments.create(
   description: 'Established a web development competency within Best Buy Health'
@@ -143,51 +159,16 @@ proj.apps.create(
   comment: 'The pilot program ended and app is no longer available.'
 )
 
-# as senior manager
-
-role = company.roles.find_by_title('Sr. Manager, Software Engineering')
-
-proj = role.projects.create(
-  name: 'MyAds Platform',
-  description: <<HEREDOC
-I managed up to sixteen engineers and QA spread across two teams, one full-stack and one
-data engineering. The teams built and supported the MyAds advertising reporting platform and
-were part of the larger Marketing and Advertising organization at Best Buy.
-HEREDOC
-)
-
-proj.accomplishments.create(
-  description: 'Led successful platform modernization effort for the MyAds advertising reporting website'
-)
-proj.accomplishments.create(
-  description: 'Led the public rollout of MyAds'
-)
-proj.accomplishments.create(
-  description: 'Ensured MyAds adhered to Best Buy security policies'
-)
-proj.accomplishments.create(
-  description: 'Oversaw the expansion of the MyAds development team to double its original size'
-)
-proj.accomplishments.create(
-  description: 'Led the data engineering team on major process improvement initiatives'
-)
-proj.accomplishments.create(
-  description: 'Integrated offshore resources into the data engineering team'
-)
-proj.accomplishments.create(
-  description: 'Core member of the team building the internal CLI (command line interface) for MyAds'
-)
-
-# as full-stack development manager
-
 role = company.roles.create(
-  title: 'Manager, Software Development',
+  title: 'Sr. Manager, Software Engineering',
   start_date: '1/8/2021'.to_date,
   end_date: '30/6/2025'.to_date
 )
 
+# as senior engineering manager
+
 proj = role.projects.create(
-  name: 'MyAds',
+  name: 'MyAds Platform',
   description: 'MyAds is a web application that allows users to manage their advertising campaigns across multiple platforms. The application provides a unified dashboard for tracking performance metrics, optimizing ad spend, and generating reports.'
 )
 
