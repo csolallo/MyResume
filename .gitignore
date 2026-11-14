@@ -1,6 +1,8 @@
 scripts/*.txt
 docs
 
+bin
+
 # Development related
 .rspec
 tmp
