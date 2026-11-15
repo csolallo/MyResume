@@ -127,7 +127,7 @@ RSpec.configure do |config|
                             type: 'string',
                             nullable: true
                           },
-                          commment: {
+                          comment: {
                             type: 'string',
                             nullable: true
                           },

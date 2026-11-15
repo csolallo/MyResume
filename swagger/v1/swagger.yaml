@@ -317,7 +317,7 @@ components:
                     url:
                       type: string
                       nullable: true
-                    commment:
+                    comment:
                       type: string
                       nullable: true
                     image_url:
