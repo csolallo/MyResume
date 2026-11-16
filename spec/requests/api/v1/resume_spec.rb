@@ -8,7 +8,7 @@ RSpec.describe 'api/v1/resume', type: :request do
 
   path '/api/v1/resume/{id}/jobs' do
     parameter name: 'id', in: :path, required: true, type: :integer, description: 'id of the desired resume'
-    parameter name: 'since', in: :query, type: :string, required: false, description: 'only list jobs on or after this date'
+    parameter name: 'since', in: :query, type: :string, required: false, description: 'only list jobs that started on or after this date (mm/dd/yyyy), or started earlier and were still active on it'
 
     get('jobs') do
       description 'Get job details for the resume'

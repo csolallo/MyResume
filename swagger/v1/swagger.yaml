@@ -166,7 +166,8 @@ paths:
     - name: since
       in: query
       required: false
-      description: only list jobs on or after this date
+      description: only list jobs that started on or after this date (mm/dd/yyyy),
+        or started earlier and were still active on it
       schema:
         type: string
     get:

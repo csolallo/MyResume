@@ -53,17 +53,36 @@ RSpec.describe Api::V1::ResumeController, type: :controller do
     end
   end
 
-  it 'there should be no jobs prior to the since job if it is specified' do
-    test_year = 2018    
-    
+  it 'since should only return jobs that started on/after the date or were still active on it' do
+    test_year = 2018
+    since = Date.new(test_year, 1, 1)
+
     get :jobs, :params => {id: 1, since: "1/1/#{test_year}"}, format: 'json'
     expect(response.ok?).to be true
 
-    $resume = JSON.parse(response.body)
-    
-    #jobs are returned sorted by date in descending order so we just need to check the final job
-    earliest_job = $resume['jobs'][-1]
-    date = Date.parse(earliest_job["start_date"])
-    expect(date.year).to be >= test_year
+    jobs = JSON.parse(response.body)['jobs']
+    expect(jobs).not_to be_empty
+
+    jobs.each do |job|
+      started_on_or_after = Date.parse(job['start_date']) >= since
+      active_on_since = job['end_date'].nil? || Date.parse(job['end_date']) >= since
+      expect(started_on_or_after || active_on_since).to be true
+    end
+  end
+
+  it 'since should include jobs that started before the date but ran through it' do
+    resume = Resume.find(1)
+    company = Company.create!(name: 'since-spec company')
+    spanning = Role.create!(title: 'since-spec spanning role', company: company, resume: resume,
+                            start_date: DateTime.new(1990, 1, 1), end_date: DateTime.new(1991, 1, 1))
+    ended_before = Role.create!(title: 'since-spec ended role', company: company, resume: resume,
+                                start_date: DateTime.new(1980, 1, 1), end_date: DateTime.new(1981, 1, 1))
+
+    get :jobs, :params => {id: 1, since: "6/1/1990"}, format: 'json'
+    expect(response.ok?).to be true
+
+    titles = JSON.parse(response.body)['jobs'].map { |j| j['title'] }
+    expect(titles).to include(spanning.title)
+    expect(titles).not_to include(ended_before.title)
   end
 end
