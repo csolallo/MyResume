@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get 'people', to: 'person#index'
       get 'person/:uuid/:action', to: 'person#%{action}'
 
       get 'resume/:id/tags/:tags/jobs', to: 'resume#jobs_by_tags'

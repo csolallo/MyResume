@@ -1,9 +1,15 @@
 module Api::V1
   class PersonController < ApplicationController
-    before_action :get_person
+    before_action :get_person, except: :index
 
     rescue_from Errors::PersonNotFound, Errors::ResumeNotFound do
       render body: nil, status: 404
+    end
+
+    def index
+      people = Person.all.map { |person| {:uuid => person.uuid, :name => person.name} }
+
+      send_response people
     end
 
     def info

@@ -13,6 +13,36 @@ RSpec.describe 'person endpoints', type: :request do
     run_test!
   }
 
+  path '/api/v1/people' do
+    get 'people' do
+      description 'Get all people'
+      tags 'Person'
+
+      response(200, 'queried for all people') do
+        produces 'application/json'
+
+        schema type: 'array',
+          items: {
+            type: 'object',
+            required: %w(uuid name),
+            properties: {
+              uuid: {
+                type: 'string'
+              },
+              name: {
+                type: 'string'
+              }
+            }
+          }
+
+        run_test! do |response|
+          data = JSON.parse response.body
+          expect(data.map { |p| p['uuid'] }).to include(Me)
+        end
+      end
+    end
+  end
+
   path '/api/v1/person/{uuid}/info' do
     parameter name: 'uuid', in: :path, type: :string, required: :true, description: 'id of the person being queried'
     

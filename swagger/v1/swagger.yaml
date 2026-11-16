@@ -4,6 +4,29 @@ info:
   title: MyResume API
   version: v1
 paths:
+  "/api/v1/people":
+    get:
+      summary: people
+      description: Get all people
+      tags:
+      - Person
+      responses:
+        '200':
+          description: queried for all people
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - uuid
+                  - name
+                  properties:
+                    uuid:
+                      type: string
+                    name:
+                      type: string
   "/api/v1/person/{uuid}/info":
     parameters:
     - name: uuid
